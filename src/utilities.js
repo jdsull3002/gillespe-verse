@@ -14,3 +14,11 @@ export function rollDice(number, sides, modifier = 0){
     }
     return response;
 }
+
+
+export function rollAdvantage(){
+    return Array.max(rollDice(2, 20).dice);
+}
+export function rollDisadvantage(){
+    return Array.min(rollDice(2, 20).dice);
+}

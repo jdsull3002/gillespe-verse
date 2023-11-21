@@ -43,6 +43,7 @@ async function clickHandler(table) {
       <button @click="clickHandler('dungeonDressing')">click me</button>
       <textarea>{{ dd }}</textarea>
     </div>
+    <router-view></router-view>
   </main>
 
 </template>
