@@ -1,13 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import BarrowMazePage from "@/pages/barrowmaze/BarrowMazePage.vue";
+import IndexPage from "@/pages/IndexPage.vue";
 
 
 const routes = [
     {
         path: '/',
-        component: BarrowMazePage
+        component: IndexPage
     },  {
-        path: '/Barrowmaze',
+        path: '/barrowmaze',
         component: BarrowMazePage
     },
 ]
