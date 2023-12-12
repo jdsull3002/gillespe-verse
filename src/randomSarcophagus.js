@@ -1,3 +1,5 @@
+import {rollDice} from "@/utilities";
+
 const bm_table8= [
     "Potion of Clairaudience",
     "Canopic Jars (Broken)",
@@ -12,14 +14,14 @@ const bm_table8= [
     "Runic Tablet",
     "Terra Cotta Canopic Jars (1d4)",
     "Potion of Climbing",
-    "Green Slime",
+    "Green Slime*",
     "Scroll: Ward Against Magic",
-    "Ochre Jelly",
+    "Ochre Jelly*",
     "Magical Scarab (Gemstone)",
     "Wand of Fire Balls",
     "Silver Figurine",
     "Gem: Jade",
-    "Rot Pudding",
+    "Rot Pudding*",
     "Potion of Strength",
     "Silver Earrings",
     "Glass Canopic Jars (1d4)",
@@ -27,17 +29,17 @@ const bm_table8= [
     "Bag of Devouring",
     "Magical Scarab (Cursed)",
     "Scroll: Ward Against Elementals",
-    "Staked Vampire",
+    "Staked Vampire*",
     "Gold Signet Ring",
     "Gem: White Pearl",
-    "Thief in Stasis (Wererat)",
+    "Thief in Stasis (Wererat)*",
     "Scroll: 2 Random Magic-User Spells",
     "Silver Canopic Jars (1d4)",
     "Potion of Gaseous Form",
     "Magical Scarab (Decorative Amulet)",
     "Dust of Sneezing and Choking",
     "Runic Tablet",
-    "Iron Statue",
+    "Iron Statue*",
     "Strangely Preserved Lizardman",
     "Magical Scarab (Gemstone)",
     "Emerald Headdress",
@@ -52,7 +54,7 @@ const bm_table8= [
     "Gem: Garnet (Red)",
     "Scroll: 3 Random Magic-User Spells",
     "Gold Scarab",
-    "Barrow Ghast",
+    "Barrow Ghast*",
     "Potion of Clairvoyance",
     "Gold Canopic Jars (1d4)",
     "Wand of Cold",
@@ -69,7 +71,7 @@ const bm_table8= [
     "Basket of Petrified Fruit",
     "Gold Scarab",
     "Gem: Chrysoberyl",
-    "Mummy",
+    "Mummy*",
     "Silver Scarab",
     "Two Electrum Urns",
     "Scroll: 4 Random Magic-User Spells",
@@ -78,26 +80,45 @@ const bm_table8= [
     "Weapon +2 (Referee’s Discretion)",
     "Gem: Smoky Quartz",
     "Potion of Delusion",
-    "Clockwork Cobra",
+    "Clockwork Cobra*",
     "Broken Black Urn",
     "Runic Tablet",
     "Silver Canopic Jars (1d4)",
     "Clockwork Scorpion",
     "Potion of Extra-Healing",
-    "Wight",
+    "Wight*",
     "Silver Scarab",
-    "Barrow Wight",
+    "Barrow Wight*",
     "Bottle of Ancient Wine",
     "Gem: Jasper (Blue)",
     "Mummified Jackal",
-    "Wraith",
+    "Wraith*",
     "Scroll: 4 Random Cleric Spells",
     "Runic Tablet",
     "Electrum Canopic Jars (1d4)",
     "Potion of Extra-Healing",
     "Platinum Scarab",
-    "Vampire",
+    "Vampire*",
     "Mithril Fleece (Cure Disease and Heal 1/week)",
     "Hand Axe +4 Dwarven Thrower"
 ];
+// need to maintain this list since every entry is found only once.
+(function (){
+    if(!localStorage.getItem('bm_table8')) {
+        localStorage.setItem('bm_table8', JSON.stringify(bm_table8));
+    }
+})();
 
+export function generateSarcophagusContents(){
+    let result = '',
+        bm_copy = JSON.parse(localStorage.getItem('bm_table8')),
+        index = rollDice(1, bm_copy.length).total - 1;
+
+    result = bm_copy[index];
+
+    bm_copy.splice(index, 1);
+
+    localStorage.setItem('bm_table8', JSON.stringify(bm_copy));
+
+    return result;
+}

@@ -82,7 +82,7 @@ const bm_table1 = {
         ]
 }
 
-export function rivalParty() {
+function rivalParty() {
     const rivalParties = [
         "Renata the Robber",
         "The Norse Whisperers",
@@ -101,16 +101,15 @@ export function rivalParty() {
             return '';
         }
     }());
-    let output = rivalParties[rollDice(1, 6).total - 1] + mAa;
-    return output;
+    return  rivalParties[rollDice(1, 6).total - 1] + mAa;
 }
 
 export function generateRandomEncounter(encounterLevel) {
-    let result = bm_table1[partyLevel][rollDice(1, 10).total-1];
+    let result = bm_table1[encounterLevel][rollDice(1, 10).total-1];
     // let result = bm_table1[partyLevel][9];
     let count = result.action();
     let label = result.label;
-    if (count != undefined){
-        return  console.log(count + " " + label)
+    if (count !== undefined){
+        return  count + " " + label;
     }
 }
