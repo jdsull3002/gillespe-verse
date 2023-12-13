@@ -13,5 +13,9 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  publicDir: process.env.NODE_ENV === "production" ? "/gillespe-verse/": "/"
+  base:  process.env.NODE_ENV === "production" ? "/gillespe-verse":'/',
+  build: {
+    outDir: 'dist',
+  },
+  // publicDir:
 })
