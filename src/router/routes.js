@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import {createRouter, createWebHashHistory, createWebHistory} from 'vue-router'
 import BarrowMazePage from "@/pages/barrowmaze/BarrowMazePage.vue";
 import IndexPage from "@/pages/IndexPage.vue";
 
@@ -14,7 +14,7 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes: routes
 });
 
