@@ -110,7 +110,7 @@ const bm_table8= [
 })();
 
 export function generateSarcophagusContents(){
-    let result = '',
+    let result,
         bm_copy = JSON.parse(localStorage.getItem('bm_table8')),
         index = rollDice(1, bm_copy.length).total - 1;
 

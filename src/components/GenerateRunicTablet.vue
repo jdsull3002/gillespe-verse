@@ -1,12 +1,12 @@
 <script setup>
-import {randomRunicTablet} from "@/randomRunicTablet";
+import {randomRunicTablet} from "@/barrowMaze/randomRunicTablet";
 
 </script>
 
 <template>
   <div>
     <button @click="randomRunicTablet()"></button>
-  <text-area>{{results}}</text-area>
+  <textarea>{{results}}</textarea>
   </div>
  </template>
 
