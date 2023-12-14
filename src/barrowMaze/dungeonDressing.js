@@ -1,4 +1,4 @@
-import {rollDice} from "@/utilities";
+import { rollDie} from "@/utilities";
 
 const bm_table3 = [
     "A statue of a terrible gargoyle.",

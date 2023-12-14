@@ -1,4 +1,4 @@
-import {rollDice} from "@/utilities";
+import { rollDie} from "@/utilities";
 
 const bm_table5 = [
     'The entrance sealed behind us. Cannot get out.',
