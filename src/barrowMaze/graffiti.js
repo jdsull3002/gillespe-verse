@@ -16,6 +16,6 @@ const bm_table5 = [
 ]
 
 export function generateWallGraffiti(){
-    return bm_table5[rollDice(1, 12).total-1];
+    return bm_table5[rollDie(1, 12) -1];
 
 }

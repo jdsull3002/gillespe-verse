@@ -8,11 +8,16 @@ export function rollDice(number, sides, modifier = 0){
         sum = sum + roll;
         count = count + 1;
     } while (count < number)
+
     const response = {
         dice: series,
         total: sum + modifier
     }
     return response;
+}
+
+export function rollDie(number, sides, modifier= 0){
+    return Math.floor((Math.random() * sides) + 1);
 }
 
 

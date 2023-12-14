@@ -8,7 +8,7 @@
 
 <script type="text/javascript">
     function randomResult (partyLevel){
-        let result = bm_table1[partyLevel][rollDice(1, 10).total-1];
+        let result = bm_table1[partyLevel][rollDice(1, 10) -1];
         // let result = bm_table1[partyLevel][9];
         let count = result.action();
         let label = result.label;
@@ -28,14 +28,14 @@
 
         //Note there is a 25% chance these groups may have 1d4 Level 0 Men-at-Arms in their employ.
         const mAa = (function () {
-            if (rollDice(1, 100).total <= 25) {
-                const count = rollDice(1, 4).total;
+            if (rollDice(1, 100) <= 25) {
+                const count = rollDice(1, 4);
                 return 'with ' + count + ' Level 0 Men-at-Arms'
             } else {
                 return '';
             }
         }());
-        let output = rivalParties[rollDice(1, 6).total - 1] + mAa;
+        let output = rivalParties[rollDice(1, 6) - 1] + mAa;
         return output;
     }
     function rollDice(number, sides, modifier = 0){

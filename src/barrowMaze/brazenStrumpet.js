@@ -1,4 +1,4 @@
-import {rollDice} from "@/utilities";
+import {rollDice, rollDie} from "@/utilities";
 
 const bm_table2 = {
         "Mazzahs the Magnificent": [1, 1, 1],
@@ -40,7 +40,7 @@ const bm_table2 = {
 
     getToDIndex = function (word) {
         return timeOfDayLabels.findIndex( function (i) {
-            return i.toLowerCase() === word;
+            return i.toLowerCase() === word.toLowerCase();
         });
     };
 export function generatePatronList(tOd)
@@ -61,12 +61,12 @@ export function generatePatronList(tOd)
         k = patron;
 
         let odds = i[timeOfDay],
-            roll = rollDice(1, 100).total;
+            roll = rollDie(1, 100);
         if (roll <= odds) {
 
             switch (k) {
                 case "Alzo Danuth (50%, in disguise)":
-                    if (rollDice(1, 100).total < 5) {
+                    if (rollDie(1, 100) < 5) {
                         k = "Alzo Danuth in disguise"
                     } else {
                         k = "Alzo Danuth";
@@ -74,7 +74,7 @@ export function generatePatronList(tOd)
                     break;
 
                 case "Urnst Gunter (50%, in disguise)":
-                    if (rollDice(1, 100).total < 5) {
+                    if (rollDie(1, 100) < 5) {
                         k = "Urnst Gunter in disguise"
                     } else {
                         k = "Urnst Gunter";
@@ -88,7 +88,7 @@ export function generatePatronList(tOd)
 
 
                 case "Level 0 Men-at-Arms (1d4)":
-                    k = (rollDice(1,4).total) + " Level 0 Men-at-Arms";
+                    k = (rollDie(1,4)) + " Level 0 Men-at-Arms";
                     verbPhrase = pluralVerbPhrase;
                     break;
 
@@ -106,7 +106,7 @@ export function generatePatronList(tOd)
                     break;
             }
 
-            finalTerm = finalTerm + k + verbPhrase + timeOfDayLabels[timeOfDay] + "\n"
+            finalTerm = finalTerm + k + verbPhrase + timeOfDayLabels[timeOfDay] + "<br/>"
         }
     }
     return finalTerm

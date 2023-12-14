@@ -1,4 +1,4 @@
-import {rollDice} from "@/utilities";
+import {rollDice, rollDie} from "@/utilities";
 
 const bm_table1 = {
     level_low: [
@@ -12,11 +12,11 @@ const bm_table1 = {
         },
         {
             label: "Ordinary Crocodile (1d4)",
-            action: () => rollDice(1, 4).total
+            action: () => rollDie(1, 4)
         },
         {
             label: "Pterodactyl (1d4+1)",
-            action: () => rollDice(1, 4, 1).total
+            action: () => rollDie(1, 4, 1)
         },
         {
             label: "Wolves (2d6)",
@@ -24,11 +24,11 @@ const bm_table1 = {
         },
         {
             label: "Skeletons (1d8)",
-            action: () => rollDice(1, 8).total
+            action: () => rollDie(1, 8)
         },
         {
             label: "Zombies (1d6)",
-            action: () => rollDice(1, 6).total
+            action: () => rollDie(1, 6)
         },
         {
             label: "Frog, Giant Poisonous (2d4)",
@@ -36,7 +36,7 @@ const bm_table1 = {
         },
         {
             label: "Insect Swarm",
-            action: () => rollDice(1, 1).total
+            action: () => rollDie(1, 1)
         },
         {
             label: "Roll on levels 3–4",
@@ -44,41 +44,41 @@ const bm_table1 = {
         }
     ],
     level_med: [
-        {label: "Axe Beak (1d6)", action: () => rollDice(1, 6).total},
+        {label: "Axe Beak (1d6)", action: () => rollDie(1, 6) },
         {label: "Lizardmen (2d4)", action: () => rollDice(2, 4).total},
         {label: "Neanderthals (2d4)", action: () => rollDice(2, 4).total},
-        {label: "Toad, Giant (1d4)", action: () => rollDice(1, 4).total},
-        {label: "Leech, Giant (1d4)", action: () => rollDice(1, 4).total},
-        {label: "Ghouls (1d6)", action: () => rollDice(1, 6).total},
-        {label: "Pteranodon (1d2)", action: () => rollDice(1, 2).total},
-        {label: "Snake, Giant Python (1)", action: () => rollDice(1, 1).total},
+        {label: "Toad, Giant (1d4)", action: () => rollDie(1, 4) },
+        {label: "Leech, Giant (1d4)", action: () => rollDie(1, 4) },
+        {label: "Ghouls (1d6)", action: () => rollDie(1, 6) },
+        {label: "Pteranodon (1d2)", action: () => rollDie(1, 2) },
+        {label: "Snake, Giant Python (1)", action: () => rollDie(1, 1) },
         {label: "Vulture, Giant (2d6)", action: () => rollDice(2, 4).total},
-        {label: "Roll on levels 5–6", action: () => generateRandomEncounter('level_mid')}
+        {label: "Roll on levels 5–6", action: () => generateRandomEncounter('level_mid') }
     ],
     level_mid: [
-        {label: "Owlbears (1d4)", action: () => rollDice(1, 4).total},
-        {label: "Ape, Carnivorous (1d6)", action: () => rollDice(1, 6).total},
-        {label: "Ghast (1d4)", action: () => rollDice(1, 4).total},
-        {label: "Scorpion, Giant (1d6)", action: () => rollDice(1, 6).total},
+        {label: "Owlbears (1d4)", action: () => rollDie(1, 4) },
+        {label: "Ape, Carnivorous (1d6)", action: () => rollDie(1, 6) },
+        {label: "Ghast (1d4)", action: () => rollDie(1, 4) },
+        {label: "Scorpion, Giant (1d6)", action: () => rollDie(1, 6) },
         {label: "Ants, Giant (2d6)", action: () => rollDice(2, 6).total},
-        {label: "Coffer Corpses (1d6)", action: () => rollDice(1, 6).total},
-        {label: "Harpies (1d8)", action: () => rollDice(1, 8).total},
-        {label: "Wolf, Warg (1d4)", action: () => rollDice(1, 4).total},
-        {label: "Shambling Mound (1d3)", action: () => rollDice(1, 3).total},
-        {label: "Trolls (1d8)", action: () => rollDice(1, 8).total}
+        {label: "Coffer Corpses (1d6)", action: () => rollDie(1, 6) },
+        {label: "Harpies (1d8)", action: () => rollDie(1, 8) },
+        {label: "Wolf, Warg (1d4)", action: () => rollDie(1, 4) },
+        {label: "Shambling Mound (1d3)", action: () => rollDie(1, 3) },
+        {label: "Trolls (1d8)", action: () => rollDie(1, 8) }
     ],
     level_high:
         [
-            {label: "Large Crocodiles", action: () => rollDice(1, 3).total},
-            {label: "Manticores", action: () => rollDice(1, 2).total},
-            {label: "Giant Boar", action: () => rollDice(1, 4).total},
-            {label: "Mummy", action: () => rollDice(1, 4).total},
-            {label: "Wyvern", action: () => rollDice(1, 2).total},
+            {label: "Large Crocodiles", action: () => rollDie(1, 3) },
+            {label: "Manticores", action: () => rollDie(1, 2) },
+            {label: "Giant Boar", action: () => rollDie(1, 4) },
+            {label: "Mummy", action: () => rollDie(1, 4) },
+            {label: "Wyvern", action: () => rollDie(1, 2) },
             {label: "Ape, Carnivorous", action: () => rollDice(2, 4).total},
-            {label: "Wights", action: () => rollDice(1, 6).total},
-            {label: "Beetle, Giant Rhinoceros", action: () => rollDice(1, 4).total},
-            {label: "Triceratops", action: () => rollDice(1, 1).total},
-            {label: "Vampire", action: () => rollDice(1, 1).total}
+            {label: "Wights", action: () => rollDie(1, 6) },
+            {label: "Beetle, Giant Rhinoceros", action: () => rollDie(1, 4) },
+            {label: "Triceratops", action: () => rollDie(1, 1) },
+            {label: "Vampire", action: () => rollDie(1, 1) }
         ]
 }
 
@@ -94,18 +94,18 @@ function rivalParty() {
 
     //Note there is a 25% chance these groups may have 1d4 Level 0 Men-at-Arms in their employ.
     const mAa = (function () {
-        if (rollDice(1, 100).total <= 25) {
-            const count = rollDice(1, 4).total;
+        if (rollDie(1, 100) <= 25) {
+            const count = rollDie(1, 4) ;
             return 'with ' + count + ' Level 0 Men-at-Arms'
         } else {
             return '';
         }
     }());
-    return  rivalParties[rollDice(1, 6).total - 1] + mAa;
+    return  rivalParties[rollDie(1, 6) - 1] + mAa;
 }
 
 export function generateRandomEncounter(encounterLevel) {
-    let result = bm_table1[encounterLevel][rollDice(1, 10).total-1];
+    let result = bm_table1[encounterLevel][rollDie(1, 10) -1];
     // let result = bm_table1[partyLevel][9];
     let count = result.action();
     let label = result.label;

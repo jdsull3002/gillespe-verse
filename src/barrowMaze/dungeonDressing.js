@@ -103,5 +103,5 @@ const bm_table3 = [
     "Referee’s Choice."
 ]
 export function randomDungeonDressing(){
-    return bm_table3[rollDice(1, 100).total-1];
+    return bm_table3[rollDie(1, 100) -1];
 }
