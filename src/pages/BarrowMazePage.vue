@@ -7,6 +7,8 @@ import {generateRandomEncounter} from "@/barrowMaze/randomEncounter";
 import {generatePatronList} from "@/barrowMaze/brazenStrumpet";
 import {generateSarcophagusContents} from "@/barrowMaze/randomSarcophagus";
 import {generateWallGraffiti} from "@/barrowMaze/graffiti";
+import {generatePitContents} from "@/barrowMaze/pitContents";
+import {generateRestock} from "@/barrowMaze/dungeonRestock";
 
 let tablet = ref('make a roll');
 let dd = ref('make a roll');
@@ -14,6 +16,8 @@ let brSt = ref('make a roll');
 let re = ref('make a roll');
 let sar = ref('make a roll');
 let graffiti = ref('make a roll');
+let pt = ref('make a roll');
+let restock = ref('make a roll');
 
 async function clickHandler(table, supplemental_param= null) {
   await nextTick();
@@ -39,10 +43,12 @@ async function clickHandler(table, supplemental_param= null) {
     case 'graffiti':
       graffiti.value = generateWallGraffiti();
       break;
-    // case '':
-    //   break;
-    // case '':
-    //   break;
+    case 'pitContents':
+      pt.value = generatePitContents();
+      break;
+    case 'restock':
+      restock.value = generateRestock();
+      break;
     default:
       break;
 
@@ -84,17 +90,17 @@ async function clickHandler(table, supplemental_param= null) {
 
         <div style="display: inline-block">
           <h2>Table 3: Dungeon Dressing</h2>
-          <div>
-            <button @click="clickHandler('dungeonDressing')">click me</button>
+          <div> <button @click="clickHandler('dungeonDressing')">click me</button>
             <div class="response">{{ dd }}</div>
+
           </div>
         </div>
 
         <div style="display: inline-block">
           <h2>Table 4: Pit Contents</h2>
           <div>
-            <button @click="clickHandler('dungeonDressing')">click me</button>
-            <div class="response">{{ dd }}</div>
+            <button @click="clickHandler('pitContents')">click me</button>
+            <div class="response">{{ pt }}</div>
           </div>
         </div>
 
@@ -114,10 +120,8 @@ async function clickHandler(table, supplemental_param= null) {
 
         <div style="display: inline-block">
           <h2>Table 7: Dungeon Restock</h2>
-          <div>
-            <button @click="clickHandler('dungeonDressing')">click me</button>
-            <div class="response">{{ dd }}</div>
-          </div>
+            <button @click="clickHandler('restock')">click me</button>
+            <div class="response">{{ restock }}</div>
         </div>
 
         <div style="display: inline-block">
