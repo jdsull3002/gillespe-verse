@@ -2,46 +2,16 @@ import {rollDice, rollDie} from "@/utilities";
 
 const bm_table1 = {
     level_low: [
-        {
-            label: "Froglings (2d4)",
-            action: () => rollDice(2, 4).total
-        },
-        {
-            label: "Rival Adventuring Party*",
-            action: () => rivalParty()
-        },
-        {
-            label: "Ordinary Crocodile (1d4)",
-            action: () => rollDie(1, 4)
-        },
-        {
-            label: "Pterodactyl (1d4+1)",
-            action: () => rollDie(1, 4, 1)
-        },
-        {
-            label: "Wolves (2d6)",
-            action: () => rollDice(2, 6).total
-        },
-        {
-            label: "Skeletons (1d8)",
-            action: () => rollDie(1, 8)
-        },
-        {
-            label: "Zombies (1d6)",
-            action: () => rollDie(1, 6)
-        },
-        {
-            label: "Frog, Giant Poisonous (2d4)",
-            action: () => rollDice(2, 4).total
-        },
-        {
-            label: "Insect Swarm",
-            action: () => rollDie(1, 1)
-        },
-        {
-            label: "Roll on levels 3–4",
-            action: () => generateRandomEncounter('level_med')
-        }
+        { label: "Froglings (2d4)", action: () => rollDice(2, 4).total },
+        { label: "Rival Adventuring Party*", action: () => rivalParty() },
+        { label: "Ordinary Crocodile (1d4)", action: () => rollDie(1, 4) },
+        { label: "Pterodactyl (1d4+1)", action: () => rollDie(1, 4, 1) },
+        { label: "Wolves (2d6)", action: () => rollDice(2, 6).total },
+        { label: "Skeletons (1d8)", action: () => rollDie(1, 8) },
+        { label: "Zombies (1d6)", action: () => rollDie(1, 6) },
+        { label: "Frog, Giant Poisonous (2d4)", action: () => rollDice(2, 4).total },
+        { label: "Insect Swarm", action: () => rollDie(1, 1) },
+        { label: "Roll on levels 3–4", action: () => generateRandomEncounter('level_med') }
     ],
     level_med: [
         {label: "Axe Beak (1d6)", action: () => rollDie(1, 6) },
@@ -67,19 +37,18 @@ const bm_table1 = {
         {label: "Shambling Mound (1d3)", action: () => rollDie(1, 3) },
         {label: "Trolls (1d8)", action: () => rollDie(1, 8) }
     ],
-    level_high:
-        [
-            {label: "Large Crocodiles", action: () => rollDie(1, 3) },
-            {label: "Manticores", action: () => rollDie(1, 2) },
-            {label: "Giant Boar", action: () => rollDie(1, 4) },
-            {label: "Mummy", action: () => rollDie(1, 4) },
-            {label: "Wyvern", action: () => rollDie(1, 2) },
-            {label: "Ape, Carnivorous", action: () => rollDice(2, 4).total},
-            {label: "Wights", action: () => rollDie(1, 6) },
-            {label: "Beetle, Giant Rhinoceros", action: () => rollDie(1, 4) },
-            {label: "Triceratops", action: () => rollDie(1, 1) },
-            {label: "Vampire", action: () => rollDie(1, 1) }
-        ]
+    level_high: [
+        {label: "Large Crocodiles", action: () => rollDie(1, 3) },
+        {label: "Manticores", action: () => rollDie(1, 2) },
+        {label: "Giant Boar", action: () => rollDie(1, 4) },
+        {label: "Mummy", action: () => rollDie(1, 4) },
+        {label: "Wyvern", action: () => rollDie(1, 2) },
+        {label: "Ape, Carnivorous", action: () => rollDice(2, 4).total},
+        {label: "Wights", action: () => rollDie(1, 6) },
+        {label: "Beetle, Giant Rhinoceros", action: () => rollDie(1, 4) },
+        {label: "Triceratops", action: () => rollDie(1, 1) },
+        {label: "Vampire", action: () => rollDie(1, 1) }
+    ]
 }
 
 function rivalParty() {
@@ -106,7 +75,6 @@ function rivalParty() {
 
 export function generateRandomEncounter(encounterLevel) {
     let result = bm_table1[encounterLevel][rollDie(1, 10) -1];
-    // let result = bm_table1[partyLevel][9];
     let count = result.action();
     let label = result.label;
     if (count !== undefined){
