@@ -1,7 +1,12 @@
-import {rollDice, rollDie} from "@/shared/utilities";
+import {rollDice, rollDie} from "../shared/utilities";
 
-const bm_table1 = {
-    level_low: [
+interface encounter {
+    label: string;
+    action: () => string | number;
+}
+
+const bm_table1: { [key:string]: encounter[]} = {
+    "level_low": [
         { label: "Froglings (2d4)", action: () => rollDice(2, 4).total },
         { label: "Rival Adventuring Party*", action: () => rivalParty() },
         { label: "Ordinary Crocodile (1d4)", action: () => rollDie(1, 4) },
@@ -13,7 +18,7 @@ const bm_table1 = {
         { label: "Insect Swarm", action: () => rollDie(1, 1) },
         { label: "Roll on levels 3–4", action: () => generateRandomEncounter('level_med') }
     ],
-    level_med: [
+    "level_med": [
         {label: "Axe Beak (1d6)", action: () => rollDie(1, 6) },
         {label: "Lizardmen (2d4)", action: () => rollDice(2, 4).total},
         {label: "Neanderthals (2d4)", action: () => rollDice(2, 4).total},
@@ -25,7 +30,7 @@ const bm_table1 = {
         {label: "Vulture, Giant (2d6)", action: () => rollDice(2, 4).total},
         {label: "Roll on levels 5–6", action: () => generateRandomEncounter('level_mid') }
     ],
-    level_mid: [
+    "level_mid": [
         {label: "Owlbears (1d4)", action: () => rollDie(1, 4) },
         {label: "Ape, Carnivorous (1d6)", action: () => rollDie(1, 6) },
         {label: "Ghast (1d4)", action: () => rollDie(1, 4) },
@@ -37,7 +42,7 @@ const bm_table1 = {
         {label: "Shambling Mound (1d3)", action: () => rollDie(1, 3) },
         {label: "Trolls (1d8)", action: () => rollDie(1, 8) }
     ],
-    level_high: [
+    "level_high": [
         {label: "Large Crocodiles", action: () => rollDie(1, 3) },
         {label: "Manticores", action: () => rollDie(1, 2) },
         {label: "Giant Boar", action: () => rollDie(1, 4) },
@@ -51,7 +56,7 @@ const bm_table1 = {
     ]
 }
 
-function rivalParty() {
+function rivalParty(): string {
     const rivalParties = [
         "Renata the Robber",
         "The Norse Whisperers",
@@ -73,7 +78,7 @@ function rivalParty() {
     return  rivalParties[rollDie(1, 6) - 1] + mAa;
 }
 
-export function generateRandomEncounter(encounterLevel) {
+export function generateRandomEncounter(encounterLevel: string ){
     let result = bm_table1[encounterLevel][rollDie(1, 10) -1];
     let count = result.action();
     let label = result.label;

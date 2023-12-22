@@ -1,8 +1,8 @@
 <script setup>
 import {randomRunicTablet} from "@/barrowMaze/randomRunicTablet";
 import {nextTick, ref} from "vue";
-import {randomDungeonDressing} from "@/barrowMaze/dungeonDressing";
 import BasePage from "@/pages/BasePage.vue";
+import {randomDungeonDressing} from "@/barrowMaze/dungeonDressing";
 import {generateRandomEncounter} from "@/barrowMaze/randomEncounter";
 import {generatePatronList} from "@/barrowMaze/brazenStrumpet";
 import {generateSarcophagusContents} from "@/barrowMaze/randomSarcophagus";
