@@ -1,4 +1,4 @@
-import {rollDice, rollDie} from "@/utilities";
+import {rollDice, rollDie} from "@/shared/utilities";
 
 const bm_table1 = {
     level_low: [

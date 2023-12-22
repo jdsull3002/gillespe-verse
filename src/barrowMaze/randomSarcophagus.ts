@@ -1,6 +1,6 @@
-import {rollDice} from "@/utilities";
+import {rollDice} from "../shared/utilities";
 
-const bm_table8= [
+const bm_table8: string[]= [
     "Potion of Clairaudience",
     "Canopic Jars (Broken)",
     "Runic Tablet",
@@ -109,9 +109,9 @@ const bm_table8= [
     }
 })();
 
-export function generateSarcophagusContents(){
+export function generateSarcophagusContents(): string {
     let result,
-        bm_copy = JSON.parse(localStorage.getItem('bm_table8')),
+        bm_copy = JSON.parse(localStorage.getItem('bm_table8') || ''),
         index = rollDice(1, bm_copy.length).total - 1;
 
     result = bm_copy[index];

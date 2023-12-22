@@ -1,6 +1,6 @@
-import { rollDie} from "@/utilities";
+import { rollDie} from "../shared/utilities";
 
-const bm_table5 = [
+const bm_table5: string[] = [
     'The entrance sealed behind us. Cannot get out.',
     'They are coming.',
     'Beware the dark water.',
@@ -15,7 +15,7 @@ const bm_table5 = [
     'Beware the great minotaur.'
 ]
 
-export function generateWallGraffiti(){
-    return bm_table5[rollDie(1, 12) -1];
+export function generateWallGraffiti(): string{
+    return bm_table5[rollDie(1, bm_table5.length) -1];
 
 }

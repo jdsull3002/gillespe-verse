@@ -1,6 +1,6 @@
-import {rollDie} from "@/utilities";
+import {rollDie} from "../shared/utilities";
 
-const bm_table7 = [
+const bm_table7: string[] = [
     "Monster",
     "Monster and treasure.",
     "Empty",
@@ -9,9 +9,9 @@ const bm_table7 = [
     "Empty"
 ];
 
-export function generateRestock(){
-    let dr = rollDie(1, 6),
-        part1 = bm_table7[dr-1];
+export function generateRestock(): string{
+    let dr: number    = rollDie(1, 6),
+        part1: string = bm_table7[dr-1];
 
     switch(dr){
         case 3: case 4: case 5: case 6:
@@ -24,6 +24,6 @@ export function generateRestock(){
     }
     return part1;
 }
-function concealedTreasure() {
+function concealedTreasure(): boolean {
     return rollDie(1,6) <= 1;
 }

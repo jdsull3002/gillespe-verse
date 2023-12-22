@@ -1,6 +1,6 @@
-import {rollDice, rollDie} from "@/utilities";
+import {rollDice, rollDie} from "../shared/utilities";
 
-const bm_table2 = {
+const bm_table2: {[key: string]: number[]} = {
         "Mazzahs the Magnificent": [1, 1, 1],
         "Bollo the Barkeeper": [95, 95, 99],
         "Taycee the Barmaid": [95, 95, 99],
@@ -36,14 +36,15 @@ const bm_table2 = {
         "Level 1 Classed Henchmen (1)": [5, 15, 35],
         "Porters/Torchbearers": [25, 45, 75]
     },
-    timeOfDayLabels = ['Morning', 'Afternoon', 'Evening'],
 
-    getToDIndex = function (word) {
+    timeOfDayLabels: string[] = ['Morning', 'Afternoon', 'Evening'],
+
+    getToDIndex = function (word: string): number {
         return timeOfDayLabels.findIndex( function (i) {
             return i.toLowerCase() === word.toLowerCase();
         });
     };
-export function generatePatronList(tOd)
+export function generatePatronList(tOd: string): string
 {
     let timeOfDay = getToDIndex(tOd),
         singularVerbPhrase = ' was there in the ',
@@ -62,6 +63,7 @@ export function generatePatronList(tOd)
 
         let odds = i[timeOfDay],
             roll = rollDie(1, 100);
+
         if (roll <= odds) {
 
             switch (k) {

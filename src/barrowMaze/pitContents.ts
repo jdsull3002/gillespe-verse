@@ -1,6 +1,6 @@
-import { rollDie} from "@/utilities";
+import { rollDie} from "../shared/utilities";
 
-const bm_table4= [
+const bm_table4: string[] = [
     "Empty",
     "Empty",
     "Empty",
@@ -11,7 +11,7 @@ const bm_table4= [
     "Bottomless"
 ];
 
-export function generatePitContents(){
+export function generatePitContents(): string{
     let part1 =  bm_table4[rollDie(1, 8) -1];
     switch(part1){
         case "Empty":
@@ -34,6 +34,6 @@ export function generatePitContents(){
     return part1;
 }
 
-function fallDamage(){
+function fallDamage(): number{
   return rollDie(1, 6);
 }

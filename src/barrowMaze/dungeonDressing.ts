@@ -1,6 +1,6 @@
-import { rollDie} from "@/utilities";
+import { rollDie} from "../shared/utilities";
 
-const bm_table3 = [
+const bm_table3: string[] = [
     "A statue of a terrible gargoyle.",
     "The smell of burning garbage.",
     "Rubble piled into a pyramid in one corner.",
@@ -102,6 +102,6 @@ const bm_table3 = [
     "Referee’s Choice.",
     "Referee’s Choice."
 ]
-export function randomDungeonDressing(){
-    return bm_table3[rollDie(1, 100) -1];
+export function randomDungeonDressing(): string{
+    return bm_table3[rollDie(1, bm_table3.length) -1];
 }
