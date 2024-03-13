@@ -1,6 +1,7 @@
 <script setup>
-import {randomRunicTablet} from "@/barrowMaze/randomRunicTablet";
 import {nextTick, ref} from "vue";
+import {useRoute, useRouter} from "vue-router";
+import {randomRunicTablet} from "@/barrowMaze/randomRunicTablet";
 import BasePage from "@/pages/BasePage.vue";
 import {randomDungeonDressing} from "@/barrowMaze/dungeonDressing";
 import {generateRandomEncounter} from "@/barrowMaze/randomEncounter";
@@ -18,9 +19,13 @@ let sar = ref('make a roll');
 let graffiti = ref('make a roll');
 let pt = ref('make a roll');
 let restock = ref('make a roll');
+const $route = useRoute();
+const $router = useRouter();
 
 async function clickHandler(table, supplemental_param= null) {
   await nextTick();
+  let result;
+
   switch (table){
     case 'tablet':
       tablet.value = randomRunicTablet();
@@ -32,6 +37,7 @@ async function clickHandler(table, supplemental_param= null) {
       //pop a modal with 5 radios.
         re.value = '';
         re.value = generateRandomEncounter(supplemental_param);
+        result = re.value;
       break;
     case 'brazenStrumpet':
       brSt.value="";
@@ -51,8 +57,15 @@ async function clickHandler(table, supplemental_param= null) {
       break;
     default:
       break;
-
   }
+
+  $router.push({
+    name: 'Results',
+    props: {
+      title: 'a location',
+      result: result
+    }
+  });
 }
 </script>
 
@@ -138,7 +151,6 @@ async function clickHandler(table, supplemental_param= null) {
 
     </template>
   </BasePage>
-
 
 </template>
 

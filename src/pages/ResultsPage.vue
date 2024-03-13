@@ -1,9 +1,11 @@
 <script setup lang="ts">
-  defineProps({title: String, results: String})
+import {defineProps} from 'vue';
+
+const props = defineProps(['title', 'result'])
 </script>
 
 <template>
-
+{{result}}
 </template>
 
 <style scoped>

@@ -1,4 +1,4 @@
-import {createRouter, createWebHashHistory} from 'vue-router'
+import {createRouter, createWebHashHistory, useRoute} from 'vue-router'
 import BarrowMazePage from "../pages/BarrowMazePage.vue";
 import IndexPageNew from "../pages/IndexPageNew.vue";
 import ArachiaPage from "../pages/ArachiaPage.vue";
@@ -6,6 +6,7 @@ import HighfellPage from "../pages/HighfellPage.vue";
 import DwarrowDeepPage from "../pages/DwarrowDeepPage.vue";
 import ResultsPage from "../pages/ResultsPage.vue";
 
+const $route = useRoute();
 
 const routes = [
     {
@@ -30,7 +31,9 @@ const routes = [
     },
     {
         path: '/results',
-        component: ResultsPage
+        name: 'Results',
+        component: ResultsPage,
+        props: true
     }
 ]
 
