@@ -4,6 +4,7 @@ import IndexPageNew from "../pages/IndexPageNew.vue";
 import ArachiaPage from "../pages/ArachiaPage.vue";
 import HighfellPage from "../pages/HighfellPage.vue";
 import DwarrowDeepPage from "../pages/DwarrowDeepPage.vue";
+import ResultsPage from "../pages/ResultsPage.vue";
 
 
 const routes = [
@@ -27,6 +28,10 @@ const routes = [
         path: '/dwarrowdeep',
         component: DwarrowDeepPage
     },
+    {
+        path: '/results',
+        component: ResultsPage
+    }
 ]
 
 const router = createRouter({

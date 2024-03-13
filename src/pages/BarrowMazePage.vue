@@ -31,7 +31,7 @@ async function clickHandler(table, supplemental_param= null) {
     case 'randomEncounter':
       //pop a modal with 5 radios.
         re.value = '';
-      re.value = generateRandomEncounter(supplemental_param);
+        re.value = generateRandomEncounter(supplemental_param);
       break;
     case 'brazenStrumpet':
       brSt.value="";
