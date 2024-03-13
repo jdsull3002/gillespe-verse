@@ -6,6 +6,7 @@
   <div>
     <slot name="header"></slot>
     <slot name="default"></slot>
+    <slot name="result"></slot>
   </div>
 
 </template>

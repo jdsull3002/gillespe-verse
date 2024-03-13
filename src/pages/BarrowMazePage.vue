@@ -1,8 +1,9 @@
 <script setup>
 import {nextTick, ref} from "vue";
-import {useRoute, useRouter} from "vue-router";
-import {randomRunicTablet} from "@/barrowMaze/randomRunicTablet";
+
 import BasePage from "@/pages/BasePage.vue";
+
+import {randomRunicTablet} from "@/barrowMaze/randomRunicTablet";
 import {randomDungeonDressing} from "@/barrowMaze/dungeonDressing";
 import {generateRandomEncounter} from "@/barrowMaze/randomEncounter";
 import {generatePatronList} from "@/barrowMaze/brazenStrumpet";
@@ -19,53 +20,58 @@ let sar = ref('make a roll');
 let graffiti = ref('make a roll');
 let pt = ref('make a roll');
 let restock = ref('make a roll');
-const $route = useRoute();
-const $router = useRouter();
+
+const presentResults = ref(false);
+const result = ref('');
+let isMarkup = false;
 
 async function clickHandler(table, supplemental_param= null) {
   await nextTick();
-  let result;
+  result.value = '';
+  isMarkup = false;
 
   switch (table){
     case 'tablet':
-      tablet.value = randomRunicTablet();
+      result.value = randomRunicTablet();
       break;
+
     case 'dungeonDressing':
-      dd.value = randomDungeonDressing();
+      result.value = randomDungeonDressing();
       break;
+
     case 'randomEncounter':
       //pop a modal with 5 radios.
-        re.value = '';
-        re.value = generateRandomEncounter(supplemental_param);
-        result = re.value;
+      result.value = generateRandomEncounter(supplemental_param);
       break;
+
     case 'brazenStrumpet':
-      brSt.value="";
-      brSt.value = generatePatronList(supplemental_param);
+      isMarkup = true;
+      result.value = generatePatronList(supplemental_param);
       break;
     case 'sarcophagus':
-      sar.value = generateSarcophagusContents();
+      result.value = generateSarcophagusContents();
       break;
+
     case 'graffiti':
-      graffiti.value = generateWallGraffiti();
+      result.value = generateWallGraffiti();
       break;
+
     case 'pitContents':
-      pt.value = generatePitContents();
+      result.value =generatePitContents();
       break;
+
     case 'restock':
-      restock.value = generateRestock();
+      result.value = generateRestock();
       break;
+
     default:
       break;
   }
+  console.log()
+  presentResults.value = !presentResults.value;
+}
+function handleClick(){
 
-  $router.push({
-    name: 'Results',
-    props: {
-      title: 'a location',
-      result: result
-    }
-  });
 }
 </script>
 
@@ -78,8 +84,9 @@ async function clickHandler(table, supplemental_param= null) {
         </div>
       </header>
     </template>
-    <template v-slot:default>
-      <main>
+
+    <template v-slot:default v-show="!presentResults">
+      <main v-show="!presentResults">
         <div style="display: inline-block">
           <h2>Table 1: Random Encounters</h2>
           <div>
@@ -148,6 +155,18 @@ async function clickHandler(table, supplemental_param= null) {
 
 
       </main>
+
+    </template>
+
+    <template v-slot:result>
+      <div v-show="presentResults">
+
+        <div v-if="isMarkup" v-html="result"></div>
+
+        <div v-else> {{ result }}</div>
+
+        <button @click=" presentResults= !presentResults">generate more</button>
+      </div>
 
     </template>
   </BasePage>
