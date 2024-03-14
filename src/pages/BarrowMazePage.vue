@@ -12,15 +12,6 @@ import {generateWallGraffiti} from "@/barrowMaze/graffiti";
 import {generatePitContents} from "@/barrowMaze/pitContents";
 import {generateRestock} from "@/barrowMaze/dungeonRestock";
 
-let tablet = ref('make a roll');
-let dd = ref('make a roll');
-let brSt = ref('make a roll');
-let re = ref('make a roll');
-let sar = ref('make a roll');
-let graffiti = ref('make a roll');
-let pt = ref('make a roll');
-let restock = ref('make a roll');
-
 const presentResults = ref(false);
 const result = ref('');
 let isMarkup = false;
@@ -70,9 +61,7 @@ async function clickHandler(table, supplemental_param= null) {
   console.log()
   presentResults.value = !presentResults.value;
 }
-function handleClick(){
 
-}
 </script>
 
 <template>

@@ -332,7 +332,7 @@ const bm_table1 = {
     ]
 }
 
-function labelPluralize(label){
+export function labelPluralize(label){
     const endsWithY = new RegExp(/y$/i);
     const endsWithOlf = new RegExp(/(olf)$/i);
     const endsWithMan = new RegExp(/(man)$/i);
