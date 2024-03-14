@@ -87,85 +87,82 @@ function handleClick(){
 
     <template v-slot:default v-show="!presentResults">
       <main v-show="!presentResults">
-        <div style="display: inline-block">
+        <div>
           <h2>Table 1: Random Encounters</h2>
           <div>
             <button @click="clickHandler('randomEncounter', 'level_low')">L 1-2</button>
             <button @click="clickHandler('randomEncounter', 'level_med')">L 3-4</button>
             <button @click="clickHandler('randomEncounter', 'level_mid')">L 5-6</button>
             <button @click="clickHandler('randomEncounter', 'level_high')">L 7-8</button>
-            <div class="response">{{ re }}</div>
           </div>
         </div>
 
-        <div style="display: inline-block">
+        <div>
           <h2>Table 2: Brazen Strumpet Random Patron Generator</h2>
           <div>
             <button @click="clickHandler('brazenStrumpet', 'Morning')">Morning</button>
             <button @click="clickHandler('brazenStrumpet', 'Afternoon')">Noon</button>
             <button @click="clickHandler('brazenStrumpet', 'Evening')">Evening</button>
-            <div class="response" v-html=brSt></div>
           </div>
         </div>
 
-        <div style="display: inline-block">
+        <div>
           <h2>Table 3: Dungeon Dressing</h2>
-          <div> <button @click="clickHandler('dungeonDressing')">click me</button>
-            <div class="response">{{ dd }}</div>
-
+          <div>
+            <button @click="clickHandler('dungeonDressing')">Make a roll </button>
           </div>
         </div>
 
-        <div style="display: inline-block">
+        <div>
           <h2>Table 4: Pit Contents</h2>
           <div>
-            <button @click="clickHandler('pitContents')">click me</button>
-            <div class="response">{{ pt }}</div>
+            <button @click="clickHandler('pitContents')">Make a roll </button>
           </div>
         </div>
 
-        <div style="display: inline-block">
+        <div>
           <h2>Table 5: Graffiti</h2>
-          <div><button @click="clickHandler('graffiti')">click me</button>
-            <div class="response">{{ graffiti }}</div></div>
+          <div>
+            <button @click="clickHandler('graffiti')">Make a roll </button>
           </div>
+        </div>
 
-        <div style="display: inline-block">
+
+        <div>
           <h2>Table 6: Runic Tablet Result</h2>
           <div>
-            <button @click="clickHandler('tablet')">click me</button>
-            <div class="response">{{ tablet }}</div>
+            <button @click="clickHandler('tablet')">Make a roll </button>
           </div>
         </div>
 
-        <div style="display: inline-block">
+        <div>
           <h2>Table 7: Dungeon Restock</h2>
-            <button @click="clickHandler('restock')">click me</button>
-            <div class="response">{{ restock }}</div>
+            <button @click="clickHandler('restock')">Make a roll </button>
         </div>
 
-        <div style="display: inline-block">
+        <div>
           <h2>Table 8: Sarcophagus Contents</h2>
           <div>
-            <button @click="clickHandler('sarcophagus')">click me</button>
-            <div class="response">{{ sar }}</div>
+            <button @click="clickHandler('sarcophagus')">Make a roll </button>
           </div>
         </div>
 
-
-
       </main>
-
     </template>
 
     <template v-slot:result>
       <div v-show="presentResults">
 
-        <div v-if="isMarkup" v-html="result"></div>
+        <div v-if="isMarkup">
+          <h2>{{result.timeOfDay}}</h2>
+          <p v-for="patron, index in result.patrons" :key="index">{{patron}}</p>
+        </div>
 
-        <div v-else> {{ result }}</div>
+        <div v-else>
+          <p>{{ result }}</p>
+        </div>
 
-        <button @click=" presentResults= !presentResults">generate more</button>
+        <button @click=" presentResults= !presentResults">Go Back</button>
       </div>
 
     </template>

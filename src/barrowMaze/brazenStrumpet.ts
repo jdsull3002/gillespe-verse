@@ -50,7 +50,7 @@ export function generatePatronList(tOd: string): string
         singularVerbPhrase = ' was there in the ',
         pluralVerbPhrase = " were there in the ",
         verbPhrase = singularVerbPhrase,
-        finalTerm = '';
+        finalTerm = [];
 
     if (timeOfDay === -1) {
         throw new Error('Could not Parse that time of day. Please use "Morning, Afternoon, or Evening".');
@@ -108,8 +108,8 @@ export function generatePatronList(tOd: string): string
                     break;
             }
 
-            finalTerm = finalTerm + k + verbPhrase + timeOfDayLabels[timeOfDay] + "<br/>"
+            finalTerm.push(k);
         }
     }
-    return finalTerm
+    return { patrons: finalTerm, timeOfDay: timeOfDayLabels[timeOfDay]}
 }

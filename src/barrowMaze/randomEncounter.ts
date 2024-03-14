@@ -334,9 +334,9 @@ const bm_table1 = {
 
 function labelPluralize(label){
     const endsWithY = new RegExp(/y$/i);
-    const endsWithOlf = new RegExp(/[olf]$/i);
-    const endsWithMan = new RegExp(/[man]$/i);
-    const endsWithCh = new RegExp(/[ch]$/i);
+    const endsWithOlf = new RegExp(/(olf)$/i);
+    const endsWithMan = new RegExp(/(man)$/i);
+    const endsWithCh = new RegExp(/(ch)$/i);
 
     if(endsWithY.test(label)){
         return label.replace('y', 'ies');
@@ -388,7 +388,9 @@ export function generateRandomEncounter(encounterLevel, depth = 0) {
         return action.callback();
     } else {
         const count = action.callback();
+
         if(count > 1){
+            console.log(count > 1);
             label = labelPluralize(label);
         }
         response = count + " " + label;
