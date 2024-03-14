@@ -63,24 +63,24 @@ function generateRandomEncounter(area, level)
         <div>
           <h2>Table 1:Saucy Tart Random Patron Generator</h2>
           <div>
-            <button @click="clickHandler('saucyTart', 'Morning')">Morning</button>
-            <button @click="clickHandler('saucyTart', 'Afternoon')">Noon</button>
-            <button @click="clickHandler('saucyTart', 'Evening')">Evening</button>
+            <ion-button color="secondary" @click="clickHandler('saucyTart', 'Morning')">Morning</ion-button>
+            <ion-button color="warning" @click="clickHandler('saucyTart', 'Afternoon')">Noon</ion-button>
+            <ion-button color="tertiary" @click="clickHandler('saucyTart', 'Evening')">Evening</ion-button>
           </div>
         </div>
 
         <div>
           <h2>Table 2: Random Monster Tables</h2>
           <div v-show="selectedArea == ''">
-            <button @click="selectedArea = 'arches'">Ruined Arches</button>
-            <button  @click="selectedArea = 'caverns'">Caverns</button>
-            <button  @click="selectedArea = 'crypts'">Crypts</button>
-            <button  @click="selectedArea = 'sewers'">Sewers</button>
+            <ion-button @click="selectedArea = 'arches'">Ruined Arches</ion-button>
+            <ion-button  @click="selectedArea = 'caverns'">Caverns</ion-button>
+            <ion-button  @click="selectedArea = 'crypts'">Crypts</ion-button>
+            <ion-button  @click="selectedArea = 'sewers'">Sewers</ion-button>
           </div>
           <div v-show="selectedArea != ''">
-            <button @click="generateRandomEncounter(selectedArea, 'low')">Levels 1-3</button>
-            <button  @click="generateRandomEncounter(selectedArea, 'high')"> Levels 4-7</button>
-            <button @click="selectedArea = ''">Go Back</button>
+            <ion-button @click="generateRandomEncounter(selectedArea, 'low')">Levels 1-3</ion-button>
+            <ion-button  @click="generateRandomEncounter(selectedArea, 'high')"> Levels 4-7</ion-button>
+            <ion-button @click="selectedArea = ''">Go Back</ion-button>
           </div>
 
         </div>
@@ -88,13 +88,13 @@ function generateRandomEncounter(area, level)
         <div>
           <h2>Table 3: Pit Contents</h2>
           <div>
-            <button @click="clickHandler('pitContents')">Make a roll </button>
+            <ion-button @click="clickHandler('pitContents')">Make a roll </ion-button>
           </div>
         </div>
 
         <div>
           <h2>Table 4: Dungeon Restock</h2>
-          <button @click="clickHandler('restock')">Make a roll </button>
+          <ion-button @click="clickHandler('restock')">Make a roll </ion-button>
         </div>
 
       </main>
@@ -111,7 +111,7 @@ function generateRandomEncounter(area, level)
           <p>{{ result }}</p>
         </div>
 
-        <button @click=" presentResults= !presentResults">Go Back</button>
+        <ion-button @click=" presentResults= !presentResults">Go Back</ion-button>
       </div>
     </template>
   </BasePage>

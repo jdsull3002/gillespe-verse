@@ -22,7 +22,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
           <div>
             <h3>The Barrowmaze</h3>
             <router-link to="/barrowmaze">
-              <button>click me</button>
+              <ion-button>click me</ion-button>
             </router-link>
           </div>
 
@@ -30,21 +30,21 @@ import HelloWorld from "@/components/HelloWorld.vue";
           <div>
             <h3>Caverns of Arachia</h3>
             <router-link to="/arachia">
-              <button>click me</button>
+              <ion-button>click me</ion-button>
             </router-link>
           </div>
 
           <div>
             <h3>Highfell</h3>
             <router-link to="/highfell">
-              <button>click me</button>
+              <ion-button>click me</ion-button>
             </router-link>
           </div>
 
           <div>
             <h3>Dwarrowdeep</h3>
             <router-link to="/dwarrowdeep">
-              <button>click me</button>
+              <ion-button>click me</ion-button>
             </router-link>
           </div>
 

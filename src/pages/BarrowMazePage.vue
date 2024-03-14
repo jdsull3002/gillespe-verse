@@ -79,40 +79,40 @@ async function clickHandler(table, supplemental_param= null) {
         <div>
           <h2>Table 1: Random Encounters</h2>
           <div>
-            <button @click="clickHandler('randomEncounter', 'level_low')">L 1-2</button>
-            <button @click="clickHandler('randomEncounter', 'level_med')">L 3-4</button>
-            <button @click="clickHandler('randomEncounter', 'level_mid')">L 5-6</button>
-            <button @click="clickHandler('randomEncounter', 'level_high')">L 7-8</button>
+            <ion-button color="primary" @click="clickHandler('randomEncounter', 'level_low')">L 1-2</ion-button>
+            <ion-button color="success" @click="clickHandler('randomEncounter', 'level_med')">L 3-4</ion-button>
+            <ion-button color="warning" @click="clickHandler('randomEncounter', 'level_mid')">L 5-6</ion-button>
+            <ion-button color="danger" @click="clickHandler('randomEncounter', 'level_high')">L 7-8</ion-button>
           </div>
         </div>
 
         <div>
           <h2>Table 2: Brazen Strumpet Random Patron Generator</h2>
           <div>
-            <button @click="clickHandler('brazenStrumpet', 'Morning')">Morning</button>
-            <button @click="clickHandler('brazenStrumpet', 'Afternoon')">Noon</button>
-            <button @click="clickHandler('brazenStrumpet', 'Evening')">Evening</button>
+            <ion-button color="secondary" @click="clickHandler('brazenStrumpet', 'Morning')">Morning</ion-button>
+            <ion-button color="warning" @click="clickHandler('brazenStrumpet', 'Afternoon')">Noon</ion-button>
+            <ion-button color="tertiary" @click="clickHandler('brazenStrumpet', 'Evening')">Evening</ion-button>
           </div>
         </div>
 
         <div>
           <h2>Table 3: Dungeon Dressing</h2>
           <div>
-            <button @click="clickHandler('dungeonDressing')">Make a roll </button>
+            <ion-button @click="clickHandler('dungeonDressing')">Make a roll </ion-button>
           </div>
         </div>
 
         <div>
           <h2>Table 4: Pit Contents</h2>
           <div>
-            <button @click="clickHandler('pitContents')">Make a roll </button>
+            <ion-button @click="clickHandler('pitContents')">Make a roll </ion-button>
           </div>
         </div>
 
         <div>
           <h2>Table 5: Graffiti</h2>
           <div>
-            <button @click="clickHandler('graffiti')">Make a roll </button>
+            <ion-button @click="clickHandler('graffiti')">Make a roll </ion-button>
           </div>
         </div>
 
@@ -120,19 +120,19 @@ async function clickHandler(table, supplemental_param= null) {
         <div>
           <h2>Table 6: Runic Tablet Result</h2>
           <div>
-            <button @click="clickHandler('tablet')">Make a roll </button>
+            <ion-button @click="clickHandler('tablet')">Make a roll </ion-button>
           </div>
         </div>
 
         <div>
           <h2>Table 7: Dungeon Restock</h2>
-            <button @click="clickHandler('restock')">Make a roll </button>
+            <ion-button @click="clickHandler('restock')">Make a roll </ion-button>
         </div>
 
         <div>
           <h2>Table 8: Sarcophagus Contents</h2>
           <div>
-            <button @click="clickHandler('sarcophagus')">Make a roll </button>
+            <ion-button @click="clickHandler('sarcophagus')">Make a roll </ion-button>
           </div>
         </div>
 
@@ -151,7 +151,7 @@ async function clickHandler(table, supplemental_param= null) {
           <p>{{ result }}</p>
         </div>
 
-        <button @click=" presentResults= !presentResults">Go Back</button>
+        <ion-button @click=" presentResults= !presentResults">Go Back</ion-button>
       </div>
 
     </template>

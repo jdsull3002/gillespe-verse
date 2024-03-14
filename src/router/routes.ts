@@ -1,4 +1,4 @@
-import {createRouter, createWebHashHistory, useRoute} from 'vue-router'
+import {createRouter, createWebHashHistory} from '@ionic/vue-router'
 import BarrowMazePage from "../pages/BarrowMazePage.vue";
 import IndexPageNew from "../pages/IndexPageNew.vue";
 import ArachiaPage from "../pages/ArachiaPage.vue";
@@ -6,7 +6,7 @@ import HighfellPage from "../pages/HighfellPage.vue";
 import DwarrowDeepPage from "../pages/DwarrowDeepPage.vue";
 import ResultsPage from "../pages/ResultsPage.vue";
 
-const $route = useRoute();
+
 
 const routes = [
     {
@@ -39,7 +39,7 @@ const routes = [
 
 const router = createRouter({
     history: createWebHashHistory(),
-    routes: routes
+    routes
 });
 
 export default router;
