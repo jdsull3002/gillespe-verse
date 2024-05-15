@@ -1,5 +1,5 @@
 <script setup>
-import {nextTick, ref} from "vue";
+import {nextTick, onMounted, ref} from "vue";
 
 import BasePage from "@/pages/BasePage.vue";
 
@@ -16,7 +16,18 @@ const presentResults = ref(false);
 const result = ref('');
 let isMarkup = false;
 
+const returnButton = ref(null);
+
+
 async function clickHandler(table, supplemental_param= null) {
+
+  const node = returnButton.value;
+ let b =  node.shadowRoot.querySelectorAll("button");
+
+
+  b[0].setAttribute("style", "background-color: red");
+  debugger;
+
   await nextTick();
   result.value = '';
   isMarkup = false;
@@ -151,7 +162,7 @@ async function clickHandler(table, supplemental_param= null) {
           <p>{{ result }}</p>
         </div>
 
-        <ion-button @click=" presentResults= !presentResults">Go Back</ion-button>
+        <ion-button ref="returnButton" @click=" presentResults= !presentResults">Go Back</ion-button>
       </div>
 
     </template>
