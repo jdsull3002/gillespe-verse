@@ -1,5 +1,5 @@
 <script setup>
-import {nextTick, onMounted, ref} from "vue";
+import {nextTick, ref} from "vue";
 
 import BasePage from "@/pages/BasePage.vue";
 
@@ -26,7 +26,6 @@ async function clickHandler(table, supplemental_param= null) {
 
 
   b[0].setAttribute("style", "background-color: red");
-  debugger;
 
   await nextTick();
   result.value = '';
@@ -155,7 +154,7 @@ async function clickHandler(table, supplemental_param= null) {
 
         <div v-if="isMarkup">
           <h2>{{result.timeOfDay}}</h2>
-          <p v-for="patron, index in result.patrons" :key="index">{{patron}}</p>
+          <p v-for="(patron, key) in result.patrons" :key="key">{{patron}}</p>
         </div>
 
         <div v-else>
@@ -170,9 +169,3 @@ async function clickHandler(table, supplemental_param= null) {
 
 </template>
 
-<style scoped>
-.response {
-  width: 400px;
-  overflow: auto;
-}
-</style>

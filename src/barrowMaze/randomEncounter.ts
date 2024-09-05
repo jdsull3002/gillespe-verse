@@ -1,8 +1,7 @@
-import {rollDice, rollDie} from "../shared/utilities";
-
+import {labelPluralize, rollDice, rollDie} from "../shared/utilities";
 
 const bm_table1 = {
-    "level_low": [
+    level_low: [
         {
             label: "Frogling",
             action:
@@ -84,7 +83,7 @@ const bm_table1 = {
                 }
         }
     ],
-    "level_med": [
+    level_med: [
         {
             label: "Axe Beak",
             action:
@@ -166,7 +165,7 @@ const bm_table1 = {
                 }
         }
     ],
-    "level_mid": [
+    level_mid: [
         {
             label: "Owlbear",
             action:
@@ -248,7 +247,7 @@ const bm_table1 = {
                 }
         }
     ],
-    "level_high": [
+    level_high: [
         {
             label: "Large Crocodile",
             action:
@@ -332,31 +331,6 @@ const bm_table1 = {
     ]
 }
 
-export function labelPluralize(label){
-    const endsWithY = new RegExp(/y$/i);
-    const endsWithOlf = new RegExp(/(olf)$/i);
-    const endsWithMan = new RegExp(/(man)$/i);
-    const endsWithCh = new RegExp(/(ch)$/i);
-
-    if(endsWithY.test(label)){
-        return label.replace('y', 'ies');
-    }
-
-    if(endsWithOlf.test(label)){
-        return label.replace('olf', 'olves');
-    }
-
-    if(endsWithMan.test(label)){
-        return label.replace('man', 'men');
-    }
-
-    if(endsWithCh.test(label)){
-        return label.replace('ch', 'ches');
-    }
-
-    return label + 's';
-
-}
 
 function rivalParty() {
     const rivalParties = [
@@ -380,7 +354,7 @@ function rivalParty() {
     return rivalParties[rollDie(1, 6) - 1] + mAa;
 }
 
-export function generateRandomEncounter(encounterLevel, depth = 0) {
+export function generateRandomEncounter(encounterLevel: string) :string {
     let response,
         {action, label} = bm_table1[encounterLevel][rollDie(1, 10) - 1];
 

@@ -15,8 +15,10 @@ export function rollDice(number: number, sides: number, modifier: number = 0): {
     }
 }
 
-export function rollDie(number: number, sides: number, modifier:number = 0): number {
-    return  Math.floor((Math.random() * sides) + 1);
+export function rollDie(number: number,
+                        sides: number,
+                        modifier:number = 0): number {
+    return  Math.floor((Math.random() * sides) + 1) + modifier;
 }
 
 export function rollAdvantage(): number {
@@ -24,4 +26,30 @@ export function rollAdvantage(): number {
 }
 export function rollDisadvantage(): number {
     return Math.min(...rollDice(2, 20).dice);
+}
+
+export function labelPluralize(label: string): string{
+    const endsWithY = new RegExp(/y$/i);
+    const endsWithOlf = new RegExp(/(olf)$/i);
+    const endsWithMan = new RegExp(/(man)$/i);
+    const endsWithCh = new RegExp(/(ch)$/i);
+
+    if(endsWithY.test(label)){
+        return label.replace('y', 'ies');
+    }
+
+    if(endsWithOlf.test(label)){
+        return label.replace('olf', 'olves');
+    }
+
+    if(endsWithMan.test(label)){
+        return label.replace('man', 'men');
+    }
+
+    if(endsWithCh.test(label)){
+        return label.replace('ch', 'ches');
+    }
+
+    return label + 's';
+
 }
