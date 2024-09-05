@@ -16,7 +16,7 @@ import BasePage from "@/pages/BasePage.vue";
     <template v-slot:default>
       <main>
         <div>
-
+          Coming Soon!
         </div>
       </main>
     </template>

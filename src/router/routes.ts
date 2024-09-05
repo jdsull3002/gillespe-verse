@@ -5,6 +5,7 @@ import ArachiaPage from "../pages/ArachiaPage.vue";
 import HighfellPage from "../pages/HighfellPage.vue";
 import DwarrowDeepPage from "../pages/DwarrowDeepPage.vue";
 import ResultsPage from "../pages/ResultsPage.vue";
+import GemsTreasures from "../pages/GemsTreasures.vue";
 
 
 
@@ -28,6 +29,10 @@ const routes = [
     {
         path: '/dwarrowdeep',
         component: DwarrowDeepPage
+    },
+    {
+        path: '/gemsTreasures',
+        component: GemsTreasures
     },
     {
         path: '/results',

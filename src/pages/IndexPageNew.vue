@@ -1,6 +1,7 @@
 <script setup>
 import BasePage from "@/pages/BasePage.vue";
 import HelloWorld from "@/components/HelloWorld.vue";
+import {IonButton} from "@ionic/vue";
 </script>
 
 <template>
@@ -44,6 +45,12 @@ import HelloWorld from "@/components/HelloWorld.vue";
           <div>
             <h3>Dwarrowdeep</h3>
             <router-link to="/dwarrowdeep">
+              <ion-button>click me</ion-button>
+            </router-link>
+          </div>
+          <div>
+            <h3>Gems and Jewels</h3>
+            <router-link to="/gemsTreasures">
               <ion-button>click me</ion-button>
             </router-link>
           </div>
