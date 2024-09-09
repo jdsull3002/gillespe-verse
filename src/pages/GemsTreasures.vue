@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import BasePage from "@/pages/BasePage.vue";
 import {ref, computed} from 'vue';
 import {gemInTreasure} from "@/shared/treasureGems";
@@ -7,8 +6,7 @@ import {gemInTreasure} from "@/shared/treasureGems";
 import {IonItem, IonButton, IonInput} from "@ionic/vue";
 import {GemTreasure} from "@/types/gemEnums";
 
-
-const numberOfGems: number = ref(20);
+const numberOfGems: number = ref(0);
 const response: GemTreasure[] = ref([]);
 const totalValue: number = computed(()=>{
   let tVal = 0;
@@ -22,7 +20,6 @@ function generateGems() {
     response.value.push(gemInTreasure());
   }
 }
-
 </script>
 
 <template>
@@ -47,14 +44,14 @@ function generateGems() {
 
         <div v-for="(gem, key) in response" :key="key">
           <p>
-            {{gem.description.name}}<br>
+            {{gem.size}} {{gem.description.name}}<br>
             {{gem.description.description}}, {{gem.description.opacity}}<br>
-            {{gem.size}}<br>
             {{gem.baseValue}}
           </p>
         </div>
-        <div>
-          {{totalValue}}
+        <hr >
+        <div v-if="totalValue > 0">
+          <h3> Total Value:  <span>{{totalValue}}</span></h3>
         </div>
       </main>
     </template>

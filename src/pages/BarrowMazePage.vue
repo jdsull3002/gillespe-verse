@@ -79,6 +79,7 @@ async function clickHandler(table, supplemental_param= null) {
     <template v-slot:header>
       <header>
         <div class="wrapper">
+          <img class="titleArt" src="../../art/BMC/header.png" width="50%" alt="Barrowmaze Complete"/>
           <h1>Barrowmaze</h1>
         </div>
       </header>

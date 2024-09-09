@@ -5,12 +5,12 @@ export enum opacityType {
 }
 
 export enum gemSizeEnum {
-    verySmall= "very small",
-    small = "small",
-    average = "average",
-    large = "large",
-    veryLarge = "veryLarge",
-    huge = "huge",
+    verySmall= "Very Small",
+    small = "Small",
+    average = "Average",
+    large = "Large",
+    veryLarge = "Very Large",
+    huge = "Huge",
 }
 
 export enum gemClass {

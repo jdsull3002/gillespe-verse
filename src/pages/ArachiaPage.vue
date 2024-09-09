@@ -8,6 +8,8 @@ import {generatePitContents} from "@/barrowMaze/pitContents";
 import {generateRestock} from "@/barrowMaze/dungeonRestock";
 import {generateRandomMonster} from "@/archaia/randomMonster";
 
+import {IonButton} from '@ionic/vue';
+
 const presentResults = ref(false);
 const result = ref('');
 
@@ -53,6 +55,8 @@ function generateRandomEncounter(area, level)
     <template v-slot:header>
       <header>
         <div class="wrapper">
+          <img src="../../art/BMC/coa title.png"  />
+          <br />
          <h1>Caverns of Archaia</h1>
         </div>
       </header>
