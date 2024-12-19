@@ -1,6 +1,4 @@
-
 import {opacityType, GemDetails} from "./gemEnums";
-import {getPathToRoot} from "echarts/types/src/chart/helper/treeHelper";
 
 const pathRoot = '../src/assets/gemstones/fancy';
 
@@ -122,7 +120,7 @@ export const PreciousStones = [
 // 4. Aquamarine: pale blue green (500)
 const Aquamarine: GemDetails = {
     description: 'pale blue green',
-    image: pathRoot + '/',
+    image: pathRoot + '/rare_aquamarine.jpg',
     name: "Aquamarine",
     opacity: opacityType.transparent,
     value: 500
@@ -131,7 +129,7 @@ const Aquamarine: GemDetails = {
 // 7. Garnet: violet (the most prized) (500)
 const RareGarnet: GemDetails = {
     description: 'violet',
-    image: pathRoot + '/',
+    image: pathRoot + '/rare_garnet.jpg',
     name: "Garnet",
     opacity: opacityType.transparent,
     value: 500
@@ -140,7 +138,7 @@ const RareGarnet: GemDetails = {
 // 10. Pearl*:  pure black (the most prized) (500)
 const RarePearl: GemDetails = {
     description: 'pure black ',
-    image: pathRoot + '/',
+    image: pathRoot + '/black_pearl.jpg',
     name: "Pearl",
     opacity: opacityType.opaque,
     value: 500
@@ -149,7 +147,7 @@ const RarePearl: GemDetails = {
 // 11. Peridot: rich olive green (Chrysolite) (500)
 const Peridot: GemDetails = {
     description: 'rich olive green (Chrysolite)',
-    image: pathRoot + '/',
+    image: pathRoot + '/peridot.jpg',
     name: "Peridot",
     opacity: opacityType.transparent,
     value: 500
@@ -158,7 +156,7 @@ const Peridot: GemDetails = {
 // 12. Spinel: very deep blue (the most prized) (500)
 const RareSpinel: GemDetails = {
     description: 'green or very deep blue',
-    image: pathRoot + '/',
+    image: pathRoot + '/rare_spinel.jpg',
     name: "Spinel",
     opacity: opacityType.transparent,
     value: 500
@@ -167,7 +165,7 @@ const RareSpinel: GemDetails = {
 // 13. Topaz: golden yellow (500)
 const Topaz: GemDetails = {
     description: 'golden yellow',
-    image: pathRoot + '/',
+    image: pathRoot + '/topaz.png',
     name: "Topaz",
     opacity: opacityType.transparent,
     value: 500
