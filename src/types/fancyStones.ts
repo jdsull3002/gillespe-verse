@@ -1,92 +1,105 @@
-import {GemDetails} from "../shared/treasureGems";
-import {opacityType} from "./gemEnums";
+
+import {opacityType, GemDetails} from "./gemEnums";
+
+const pathRoot = '../src/assets/gemstones/fancy';
 
 // Precious 100
 // 1. Amber: watery gold to rich gold (100)
 const Amber: GemDetails = {
+    description: 'watery gold to rich gold',
+    image: pathRoot + '/amber.jpg',
     name: "Amber",
     opacity: opacityType.transparent,
-    description: 'watery gold to rich gold',
     value: 100
 }
 
 // 2. Alexandrite: dark green (100)
 const Alexandrite: GemDetails = {
+    description: 'dark green',
+    image: pathRoot + '/alexandrite.jpeg',
     name: "Alexandrite",
     opacity: opacityType.transparent,
-    description: 'dark green',
     value: 100
 }
 
 // 3. Amethyst: deep purple (100)
 const Amethyst: GemDetails = {
+    description: 'deep purple',
+    image: pathRoot + '/amethyst.pgn',
     name: "Amethyst",
     opacity: opacityType.transparent,
-    description: 'deep purple',
     value: 100
 }
 
 // 5. Chrysoberyl: yellow green to green (100)
 const Chrysoberyl: GemDetails = {
+    description: 'yellow green to green',
+    image: pathRoot + '/chrysoberyl.jpg',
     name: "Chrysoberyl",
     opacity: opacityType.transparent,
-    description: 'yellow green to green',
     value: 100
 }
 
 // 6. Coral*: crimson (100)
 const Coral: GemDetails = {
+    description: 'crimson',
+    image: pathRoot + '/coral.jpg',
     name: "Coral",
     opacity: opacityType.opaque,
-    description: 'crimson',
     value: 100
 }
 
 // 7. Garnet: red, brown-green (100)
 const CommonGarnet: GemDetails = {
+    description: 'red, brown-green',
+    image: pathRoot + '/common_garnet.jpg',
     name: "Garnet",
     opacity: opacityType.transparent,
-    description: 'red, brown-green',
     value: 100
 }
 
 // 8. Jade: light green, deep green, green and white, white (100)
 const Jade: GemDetails = {
+    description: 'light green, deep green, green and white, white',
+    image: pathRoot + '/jade.jpg',
     name: "Jade",
     opacity: opacityType.translucent,
-    description: 'light green, deep green, green and white, white',
     value: 100
 }
 
 // 9. Jet*: deep black (100)
 const Jet: GemDetails = {
+    description: 'deep black',
+    image: pathRoot + '/',
     name: "Jet",
     opacity: opacityType.opaque,
-    description: 'deep black',
     value: 100
 }
 
 // 10. Pearl*:  (100)
 const CommonPearl: GemDetails = {
+    description: 'lustrous white, yellowish, pinkish',
+    image: pathRoot + '/pearl.jpg',
     name: "Pearl",
     opacity: opacityType.opaque,
-    description: 'lustrous white, yellowish, pinkish',
     value: 100
 }
 
 // 12. Spinel: red, red-brown (100)
 const CommonSpinel: GemDetails = {
+    description: 'red, red-brown',
+    image: pathRoot + '/common_spinel.jpg',
     name: "Spinel",
     opacity: opacityType.transparent,
-    description: 'red, red-brown',
     value: 100
 }
 
 // 14. Tourmaline: green pale, blue pale, brown pale, or reddish pale (100)
 const Tourmaline: GemDetails = {
+    description: 'green pale, blue pale, brown pale, or reddish pale',
+    image: pathRoot + '/tourmaline.jpg',
     name: "Tourmaline",
     opacity: opacityType.transparent,
-    description: 'green pale, blue pale, brown pale, or reddish pale',
     value: 100
 }
 
