@@ -23,9 +23,10 @@ export enum gemClass {
 }
 
 export type GemDetails = {
+    description: string,
+    image: string|null,
     name :string,
     opacity: opacityType
-    description: string,
     value: number
 }
 

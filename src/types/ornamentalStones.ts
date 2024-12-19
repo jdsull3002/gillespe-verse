@@ -1,86 +1,98 @@
-import {GemDetails} from "../shared/treasureGems";
-import {opacityType} from "./gemEnums";
+import {opacityType, GemDetails} from "./gemEnums";
 
+const pathRoot = '../src/assets/gemstones/ornamental'
 const Azurite: GemDetails = {
+    description: "mottled deep blue",
+    image: pathRoot + '/azurite.png',
     name: "Azurite",
     opacity: opacityType.opaque,
-    description: "mottled deep blue",
     value: 10
 }
 const BandedAgate: GemDetails = {
+    description: "striped brown and blue and white and reddish",
+    image: pathRoot + '/banded_agate.jpg',
     name: "Banded Agate",
     opacity: opacityType.translucent,
-    description: "striped brown and blue and white and reddish",
     value: 10
 }
 
 const BlueQuartz: GemDetails = {
+    description: "pale blue",
+    image: pathRoot + '/blue_quartz.jpg',
     name: "Blue Quartz",
     opacity: opacityType.transparent,
-    description: "pale blue",
     value: 10
 }
 
 const EyeAgate: GemDetails = {
+    description: "circles of gray, white, brown, blue and/or green",
+    image: pathRoot + '/eye_agate.jpg',
     name: "Eye Agate",
     opacity: opacityType.translucent,
-    description: "circles of gray, white, brown, blue and/or green",
     value: 10
 }
 
 const Hematite: GemDetails = {
+    description: "gray-black",
+    image: pathRoot + '/hematite.jpg',
     name: "Hematite",
     opacity: opacityType.opaque,
-    description: "gray-black",
     value: 10
 }
 
 const LapisLazuli: GemDetails = {
+    description: "light and dark blue with yellow flecks",
+    image: pathRoot + '/lapis_lazuli.jpg' ,
     name: "Lapis Lazuli",
     opacity: opacityType.opaque,
-    description: "light and dark blue with yellow flecks",
     value: 10
 }
 
 const Malachite: GemDetails = {
+    description: "striated light and dark green",
+    image: pathRoot + '/malachite.jpg',
     name: "Malachite",
     opacity: opacityType.opaque,
-    description: "striated light and dark green",
     value: 10
 }
 
 const MossAgate: GemDetails = {
+    description: "pink or yellow-white with grayish or greenish \"moss markings\"",
+    image: pathRoot + '/moss_agate.jpg',
     name: "Moss Agate",
     opacity: opacityType.translucent,
-    description: "pink or yellow-white with grayish or greenish \"moss markings\"",
     value: 10
 }
 
 const Obsidian: GemDetails = {
+    description: "black volcanic glass",
+    image: pathRoot + '/obsidian.jpg',
     name: "Obsidian",
     opacity: opacityType.opaque,
-    description: "black volcanic glass",
     value: 10
 }
 
 const Rhodochrosite: GemDetails = {
+    description: "light pink",
+    image: pathRoot + '/rhodochrosite.jpg',
     name: "Rhodochrosite",
     opacity: opacityType.opaque,
-    description: "light pink",
     value: 10
 }
 
 const TigerEye: GemDetails = {
+    description: "rich brown with golden center under-hue",
+    image: pathRoot + '/tiger_eye.jpg',
     name: "Tiger Eye",
     opacity: opacityType.translucent,
-    description: "rich brown with golden center under-hue",
     value: 10
 }
 
 const Turquoise: GemDetails = {
+    description: "light blue-green",
+    image: pathRoot + '/turquoise.jpg',
     name: "Turquoise",
     opacity: opacityType.opaque,
-    description: "light blue-green",
     value: 10
 }
 

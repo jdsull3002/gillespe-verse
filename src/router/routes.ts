@@ -1,6 +1,7 @@
 import {createRouter, createWebHashHistory} from '@ionic/vue-router'
 import BarrowMazePage from "../pages/BarrowMazePage.vue";
 import IndexPageNew from "../pages/IndexPageNew.vue";
+import IndexPage from "../pages/IndexPage.vue";
 import ArachiaPage from "../pages/ArachiaPage.vue";
 import HighfellPage from "../pages/HighfellPage.vue";
 import DwarrowDeepPage from "../pages/DwarrowDeepPage.vue";
@@ -12,7 +13,7 @@ import GemsTreasures from "../pages/GemsTreasures.vue";
 const routes = [
     {
         path: '/',
-        component: IndexPageNew
+        component: IndexPage
     },
     {
         path: '/barrowmaze',

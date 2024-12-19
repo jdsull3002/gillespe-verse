@@ -1,41 +1,51 @@
-<script setup>
+<script setup >
 
-</script>
+</script >
 
-<template>
-  <div>
-    <slot name="header"></slot>
-    <slot name="default"></slot>
-    <slot name="result"></slot>
-  </div>
+<template >
+  <div class="page" >
+    <slot name="header" ></slot >
+    <slot name="default" ></slot >
+    <slot name="result" ></slot >
+  </div >
 
-</template>
+</template >
 
-<style>
-header {
-  line-height: 1.5;
+<style lang="scss" >
+.page {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px dashed red;
 }
+
+header  h1, h2, p {
+  line-height: 1.5;
+  width: 100%;
+}
+
 
 .logo {
   display: block;
   margin: 0 auto 2rem;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+//header {
+//  display: flex;
+//  place-items: center;
+//  padding-right: calc(var(--section-gap) / 2);
+//
+//  .wrapper {
+//    display: flex;
+//    place-items: flex-start;
+//    flex-wrap: wrap;
+//  }
+//}
+//
+//.logo {
+//  margin: 0 2rem 0 0;
+//}
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+
+</style >
