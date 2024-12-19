@@ -60,7 +60,7 @@ const CommonGarnet: GemDetails = {
 // 8. Jade: light green, deep green, green and white, white (100)
 const Jade: GemDetails = {
     description: 'light green, deep green, green and white, white',
-    image: pathRoot + '/jade.jpg',
+    image: pathRoot + '/jade.webp',
     name: "Jade",
     opacity: opacityType.translucent,
     value: 100
@@ -69,7 +69,7 @@ const Jade: GemDetails = {
 // 9. Jet*: deep black (100)
 const Jet: GemDetails = {
     description: 'deep black',
-    image: pathRoot + '/',
+    image: pathRoot + '/jet.webp',
     name: "Jet",
     opacity: opacityType.opaque,
     value: 100
