@@ -1,5 +1,6 @@
 
 import {opacityType, GemDetails} from "./gemEnums";
+import {getPathToRoot} from "echarts/types/src/chart/helper/treeHelper";
 
 const pathRoot = '../src/assets/gemstones/fancy';
 
@@ -120,49 +121,55 @@ export const PreciousStones = [
 // fancy 500
 // 4. Aquamarine: pale blue green (500)
 const Aquamarine: GemDetails = {
+    description: 'pale blue green',
+    image: pathRoot + '/',
     name: "Aquamarine",
     opacity: opacityType.transparent,
-    description: 'pale blue green',
     value: 500
 }
 
 // 7. Garnet: violet (the most prized) (500)
 const RareGarnet: GemDetails = {
+    description: 'violet',
+    image: pathRoot + '/',
     name: "Garnet",
     opacity: opacityType.transparent,
-    description: 'violet',
     value: 500
 }
 
 // 10. Pearl*:  pure black (the most prized) (500)
 const RarePearl: GemDetails = {
+    description: 'pure black ',
+    image: pathRoot + '/',
     name: "Pearl",
     opacity: opacityType.opaque,
-    description: 'pure black ',
     value: 500
 }
 
 // 11. Peridot: rich olive green (Chrysolite) (500)
 const Peridot: GemDetails = {
+    description: 'rich olive green (Chrysolite)',
+    image: pathRoot + '/',
     name: "Peridot",
     opacity: opacityType.transparent,
-    description: 'rich olive green (Chrysolite)',
     value: 500
 }
 
 // 12. Spinel: very deep blue (the most prized) (500)
 const RareSpinel: GemDetails = {
+    description: 'green or very deep blue',
+    image: pathRoot + '/',
     name: "Spinel",
     opacity: opacityType.transparent,
-    description: 'green or very deep blue',
     value: 500
 }
 
 // 13. Topaz: golden yellow (500)
 const Topaz: GemDetails = {
+    description: 'golden yellow',
+    image: pathRoot + '/',
     name: "Topaz",
     opacity: opacityType.transparent,
-    description: 'golden yellow',
     value: 500
 }
 

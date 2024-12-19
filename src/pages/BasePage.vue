@@ -16,7 +16,6 @@
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  border: 1px dashed red;
 }
 
 header  h1, h2, p {
