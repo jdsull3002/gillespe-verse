@@ -1,6 +1,6 @@
 import {opacityType, GemDetails} from "./gemEnums";
 
-const  pathRoot = '../gemstones/semi'
+const  pathRoot = '@/gemstones/semi'
 
 const Bloodstone: GemDetails = {
     description: "dark gray with red flecks",
