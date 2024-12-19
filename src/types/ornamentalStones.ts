@@ -1,6 +1,6 @@
 import {opacityType, GemDetails} from "./gemEnums";
 
-const pathRoot = '../src/assets/gemstones/ornamental'
+const pathRoot = 'public/gemstones/ornamental'
 const Azurite: GemDetails = {
     description: "mottled deep blue",
     image: pathRoot + '/azurite.png',

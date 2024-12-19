@@ -1,6 +1,6 @@
 import {opacityType, GemDetails} from "./gemEnums";
 
-const pathRoot = '../src/assets/gemstones/fancy';
+const pathRoot = 'public/gemstones/fancy';
 
 // Precious 100
 // 1. Amber: watery gold to rich gold (100)
