@@ -71,7 +71,7 @@ function generateGems() {
         </ion-grid>
 
         <div v-if="totalValue > 0">
-          <h3> Total Value:  <span>{{totalValue.toLocaleString()}}</span></h3>
+          <h3> Total Value:  <span>{{totalValue.toLocaleString()}} gp</span></h3>
         </div>
       </main>
     </template>

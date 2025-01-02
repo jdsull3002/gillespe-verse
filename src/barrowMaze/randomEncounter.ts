@@ -79,7 +79,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'generateRandomEncounter',
-                    callback: () => generateRandomEncounter('level_med', 1)
+                    callback: () => generateRandomEncounter('level_med')
                 }
         }
     ],
@@ -161,7 +161,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'generateRandomEncounter',
-                    callback: () => generateRandomEncounter('level_mid', 1)
+                    callback: () => generateRandomEncounter('level_mid')
                 }
         }
     ],
@@ -364,7 +364,6 @@ export function generateRandomEncounter(encounterLevel: string ) :string {
         const count = action.callback();
 
         if(count > 1){
-            console.log(count > 1);
             label = labelPluralize(label);
         }
         response = count + " " + label;
