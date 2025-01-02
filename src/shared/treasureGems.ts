@@ -7,7 +7,8 @@ import {FancyStones, PreciousStones} from "../types/fancyStones";
 import {GemStones} from "../types/gemStones";
 
 export function gemInTreasure(): GemTreasure {
-    const dr = rollDice(1, 19).total;
+    const dr = rollDie(20);
+
     if (dr < 5) {
         const sz = gemString(rollDie( 3, 3)),
         desc = OrnamentalStones[rollDice(1, 12, -1).total];
