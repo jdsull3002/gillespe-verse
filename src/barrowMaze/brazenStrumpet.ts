@@ -44,7 +44,7 @@ const bm_table2: {[key: string]: number[]} = {
             return i.toLowerCase() === word.toLowerCase();
         });
     };
-export function generatePatronList(tOd: string): string
+export function generatePatronList(tOd: string): { patrons: any[]; timeOfDay: string }
 {
     let timeOfDay = getToDIndex(tOd),
         singularVerbPhrase = ' was there in the ',
@@ -62,13 +62,13 @@ export function generatePatronList(tOd: string): string
         k = patron;
 
         let odds = i[timeOfDay],
-            roll = rollDie(1, 100);
+            roll = rollDie( 100);
 
         if (roll <= odds) {
 
             switch (k) {
                 case "Alzo Danuth (50%, in disguise)":
-                    if (rollDie(1, 100) < 5) {
+                    if (rollDie( 100) < 5) {
                         k = "Alzo Danuth in disguise"
                     } else {
                         k = "Alzo Danuth";
@@ -76,7 +76,7 @@ export function generatePatronList(tOd: string): string
                     break;
 
                 case "Urnst Gunter (50%, in disguise)":
-                    if (rollDie(1, 100) < 5) {
+                    if (rollDie( 100) < 5) {
                         k = "Urnst Gunter in disguise"
                     } else {
                         k = "Urnst Gunter";
@@ -90,7 +90,7 @@ export function generatePatronList(tOd: string): string
 
 
                 case "Level 0 Men-at-Arms (1d4)":
-                    k = (rollDie(1,4)) + " Level 0 Men-at-Arms";
+                    k = (rollDie(4)) + " Level 0 Men-at-Arms";
                     verbPhrase = pluralVerbPhrase;
                     break;
 

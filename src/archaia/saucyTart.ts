@@ -55,7 +55,7 @@ export function generatePatronList(tOd: string): string
         k = patron;
 
         let odds = i[timeOfDay],
-            roll = rollDie(1, 100);
+            roll = rollDie( 100);
 
         if (roll <= odds) {
 
@@ -65,7 +65,7 @@ export function generatePatronList(tOd: string): string
                     break;
 
                 case "Level 0 Men-at-Arms (1d4)":
-                    k = (rollDie(1,4)) + " Level 0 Men-at-Arms";
+                    k = (rollDie(4)) + " Level 0 Men-at-Arms";
                     break;
 
                 default:

@@ -12,7 +12,7 @@ const bm_table4: string[] = [
 ];
 
 export function generatePitContents(): string{
-    let part1 =  bm_table4[rollDie(1, 8) -1];
+    let part1 =  bm_table4[rollDie( 8) -1];
     switch(part1){
         case "Empty":
             part1 = part1 + ". Take " + fallDamage() + " points falling damage.";
@@ -35,5 +35,5 @@ export function generatePitContents(): string{
 }
 
 function fallDamage(): number{
-  return rollDie(1, 6);
+  return rollDie( 6);
 }

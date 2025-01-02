@@ -1,7 +1,8 @@
-<script setup>
-import {nextTick, ref} from "vue";
+<script setup  lang="ts">
+import {nextTick, Ref, ref} from "vue";
 
 import BasePage from "@/pages/BasePage.vue";
+import {IonButton} from "@ionic/vue";
 
 import {randomRunicTablet} from "@/barrowMaze/randomRunicTablet";
 import {randomDungeonDressing} from "@/barrowMaze/dungeonDressing";
@@ -12,20 +13,11 @@ import {generateWallGraffiti} from "@/barrowMaze/graffiti";
 import {generatePitContents} from "@/barrowMaze/pitContents";
 import {generateRestock} from "@/barrowMaze/dungeonRestock";
 
-const presentResults = ref(false);
-const result = ref('');
-let isMarkup = false;
-
-const returnButton = ref(null);
-
+const presentResults: Ref<boolean> = ref(false);
+const result: Ref<string | { patrons: any[]; timeOfDay: string }>  = ref('');
+let isMarkup: boolean = false;
 
 async function clickHandler(table, supplemental_param= null) {
-
-  const node = returnButton.value;
- let b =  node.shadowRoot.querySelectorAll("button");
-
-
-  b[0].setAttribute("style", "background-color: red");
 
   await nextTick();
   result.value = '';
@@ -41,7 +33,6 @@ async function clickHandler(table, supplemental_param= null) {
       break;
 
     case 'randomEncounter':
-      //pop a modal with 5 radios.
       result.value = generateRandomEncounter(supplemental_param);
       break;
 
@@ -68,7 +59,6 @@ async function clickHandler(table, supplemental_param= null) {
     default:
       break;
   }
-  console.log()
   presentResults.value = !presentResults.value;
 }
 
@@ -162,7 +152,7 @@ async function clickHandler(table, supplemental_param= null) {
           <p>{{ result }}</p>
         </div>
 
-        <ion-button ref="returnButton" @click=" presentResults= !presentResults">Go Back</ion-button>
+        <ion-button color="danger" @click=" presentResults= !presentResults">Go Back</ion-button>
       </div>
 
     </template>

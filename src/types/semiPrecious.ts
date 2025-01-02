@@ -1,13 +1,14 @@
 import {opacityType, GemDetails} from "./gemEnums";
+import {rollDie} from "../shared/utilities";
 
-const  pathRoot = '../gemstones/semi'
+const pathRoot = '../gemstones/semi'
 
 const Bloodstone: GemDetails = {
     description: "dark gray with red flecks",
     image: pathRoot + '/bloodstone.jpg',
     name: "Bloodstone",
     opacity: opacityType.opaque,
-    value: 50
+    value: rollDie(3, 3) * 10 // 40-60
 }
 
 const Carnelian: GemDetails = {
@@ -15,7 +16,7 @@ const Carnelian: GemDetails = {
     image: pathRoot + '/carnelian.jpg',
     name: "Carnelian",
     opacity: opacityType.opaque,
-    value: 50
+    value: rollDie(3, 3) * 10
 }
 
 const Chalcedony: GemDetails = {
@@ -23,7 +24,7 @@ const Chalcedony: GemDetails = {
     image: pathRoot + '/bloodstone.jpg',
     name: "Chalcedony",
     opacity: opacityType.opaque,
-    value: 50
+    value: rollDie( 3, 3) * 10
 }
 
 const Chrysoprase: GemDetails = {
@@ -31,7 +32,7 @@ const Chrysoprase: GemDetails = {
     image: pathRoot + '/bloodstone.jpg',
     name: "Chrysoprase",
     opacity: opacityType.translucent,
-    value: 50
+    value: rollDie( 3, 3) * 10
 }
 
 const Citrine: GemDetails = {
@@ -39,7 +40,7 @@ const Citrine: GemDetails = {
     image: pathRoot + '/citrine.jpg',
     name: "Citrine",
     opacity: opacityType.transparent,
-    value: 50
+    value: rollDie( 3, 3) * 10
 }
 
 const Jasper: GemDetails = {
@@ -47,7 +48,7 @@ const Jasper: GemDetails = {
     image: pathRoot + '/jasper.jpg',
     name: "Jasper",
     opacity: opacityType.opaque,
-    value: 50
+    value: rollDie( 3, 3) * 10
 }
 
 const Moonstone: GemDetails = {
@@ -55,7 +56,7 @@ const Moonstone: GemDetails = {
     image: pathRoot + '/moonstone.jpg',
     name: "Moonstone",
     opacity: opacityType.translucent,
-    value: 50
+    value: rollDie( 3, 3) * 10
 }
 
 const Onyx: GemDetails = {
@@ -63,7 +64,7 @@ const Onyx: GemDetails = {
     image: pathRoot + '/black_onyx.jpg',
     name: "Onyx",
     opacity: opacityType.opaque,
-    value: 50
+    value: rollDie( 3, 3) * 10
 }
 
 const RockCrystal: GemDetails = {
@@ -71,7 +72,7 @@ const RockCrystal: GemDetails = {
     image: pathRoot + '/rock_crystal.jpg',
     name: "Rock Crystal",
     opacity: opacityType.transparent,
-    value: 50
+    value: rollDie( 3, 3) * 10
 }
 
 const Sardonyx: GemDetails = {
@@ -79,7 +80,7 @@ const Sardonyx: GemDetails = {
     image: pathRoot + '/sardonyx.jpg',
     name: "Sardonyx",
     opacity: opacityType.opaque,
-    value: 50
+    value: rollDie( 3, 3) * 10
 }
 
 const SmokyQuartz: GemDetails = {
@@ -87,7 +88,7 @@ const SmokyQuartz: GemDetails = {
     image: pathRoot + '/smoky_quartz.jpg',
     name: "Smoky Quartz",
     opacity: opacityType.transparent,
-    value: 50
+    value: rollDie( 3, 3) * 10
 }
 
 const StarRoseQuartz: GemDetails = {
@@ -95,7 +96,7 @@ const StarRoseQuartz: GemDetails = {
     image: pathRoot + '/star_rose_quartz.jpg',
     name: "Star Rose Quartz Quartz",
     opacity: opacityType.transparent,
-    value: 50
+    value: rollDie( 3, 3) * 10
 }
 
 const Zircon: GemDetails = {
@@ -103,7 +104,7 @@ const Zircon: GemDetails = {
     image: pathRoot + '/zircon.jpg',
     name: "Zircon",
     opacity: opacityType.transparent,
-    value: 50,
+    value: rollDie( 3, 3) * 10,
 
 }
 

@@ -1,4 +1,5 @@
 import {opacityType, GemDetails} from "./gemEnums";
+import {rollDice} from "../shared/utilities";
 
 const pathRoot = '../gemstones/ornamental'
 const Azurite: GemDetails = {
@@ -6,14 +7,14 @@ const Azurite: GemDetails = {
     image: pathRoot + '/azurite.png',
     name: "Azurite",
     opacity: opacityType.opaque,
-    value: 10
+    value: rollDice(2, 4, 4).total // 6 - 12
 }
 const BandedAgate: GemDetails = {
     description: "striped brown and blue and white and reddish",
     image: pathRoot + '/banded_agate.jpg',
     name: "Banded Agate",
     opacity: opacityType.translucent,
-    value: 10
+    value: rollDice(2, 4, 4).total // 6 - 12
 }
 
 const BlueQuartz: GemDetails = {
@@ -21,7 +22,7 @@ const BlueQuartz: GemDetails = {
     image: pathRoot + '/blue_quartz.jpg',
     name: "Blue Quartz",
     opacity: opacityType.transparent,
-    value: 10
+    value: rollDice(2, 4, 4).total // 6 - 12
 }
 
 const EyeAgate: GemDetails = {
@@ -29,7 +30,7 @@ const EyeAgate: GemDetails = {
     image: pathRoot + '/eye_agate.jpg',
     name: "Eye Agate",
     opacity: opacityType.translucent,
-    value: 10
+    value: rollDice(2, 4, 4).total // 6 - 12
 }
 
 const Hematite: GemDetails = {
@@ -37,7 +38,7 @@ const Hematite: GemDetails = {
     image: pathRoot + '/hematite.jpg',
     name: "Hematite",
     opacity: opacityType.opaque,
-    value: 10
+    value: rollDice(2, 4, 4).total // 6 - 12
 }
 
 const LapisLazuli: GemDetails = {
@@ -45,7 +46,7 @@ const LapisLazuli: GemDetails = {
     image: pathRoot + '/lapis_lazuli.jpg' ,
     name: "Lapis Lazuli",
     opacity: opacityType.opaque,
-    value: 10
+    value: rollDice(2, 4, 4).total // 6 - 12
 }
 
 const Malachite: GemDetails = {
@@ -53,7 +54,7 @@ const Malachite: GemDetails = {
     image: pathRoot + '/malachite.jpg',
     name: "Malachite",
     opacity: opacityType.opaque,
-    value: 10
+    value: rollDice(2, 4, 4).total // 6 - 12
 }
 
 const MossAgate: GemDetails = {
@@ -61,7 +62,7 @@ const MossAgate: GemDetails = {
     image: pathRoot + '/moss_agate.jpg',
     name: "Moss Agate",
     opacity: opacityType.translucent,
-    value: 10
+    value: rollDice(2, 4, 4).total // 6 - 12
 }
 
 const Obsidian: GemDetails = {
@@ -69,7 +70,7 @@ const Obsidian: GemDetails = {
     image: pathRoot + '/obsidian.jpg',
     name: "Obsidian",
     opacity: opacityType.opaque,
-    value: 10
+    value: rollDice(2, 4, 4).total // 6 - 12
 }
 
 const Rhodochrosite: GemDetails = {
@@ -77,7 +78,7 @@ const Rhodochrosite: GemDetails = {
     image: pathRoot + '/rhodochrosite.jpg',
     name: "Rhodochrosite",
     opacity: opacityType.opaque,
-    value: 10
+    value: rollDice(2, 4, 4).total // 6 - 12
 }
 
 const TigerEye: GemDetails = {
@@ -85,7 +86,7 @@ const TigerEye: GemDetails = {
     image: pathRoot + '/tiger_eye.jpg',
     name: "Tiger Eye",
     opacity: opacityType.translucent,
-    value: 10
+    value: rollDice(2, 4, 4).total // 6 - 12
 }
 
 const Turquoise: GemDetails = {
@@ -93,7 +94,7 @@ const Turquoise: GemDetails = {
     image: pathRoot + '/turquoise.jpg',
     name: "Turquoise",
     opacity: opacityType.opaque,
-    value: 10
+    value: rollDice(2, 4, 4).total // 6 - 12
 }
 
 export const OrnamentalStones = [

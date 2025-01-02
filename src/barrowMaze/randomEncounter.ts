@@ -23,7 +23,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 4)
+                    callback: () => rollDie( 4)
                 }
         },
         {
@@ -31,7 +31,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 4, 1)
+                    callback: () => rollDie( 4)
                 }
         },
         {
@@ -47,7 +47,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 8)
+                    callback: () => rollDie( 8)
                 }
         },
         {
@@ -55,7 +55,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 6)
+                    callback: () => rollDie( 6)
                 }
         },
         {
@@ -71,7 +71,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 1)
+                    callback: () => rollDie( 1)
                 }
         },
         {
@@ -89,7 +89,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 6)
+                    callback: () => rollDie( 6)
                 }
         },
         {
@@ -113,7 +113,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 4)
+                    callback: () => rollDie( 4)
                 }
         },
         {
@@ -121,7 +121,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 4)
+                    callback: () => rollDie( 4)
                 }
         },
         {
@@ -129,7 +129,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 6)
+                    callback: () => rollDie( 6)
                 }
         },
         {
@@ -137,7 +137,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 2)
+                    callback: () => rollDie( 2)
                 }
         },
         {
@@ -145,7 +145,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 1)
+                    callback: () => rollDie( 1)
                 }
         },
         {
@@ -171,7 +171,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 4)
+                    callback: () => rollDie( 4)
                 }
         },
         {
@@ -179,7 +179,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 6)
+                    callback: () => rollDie( 6)
                 }
         },
         {
@@ -187,7 +187,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 4)
+                    callback: () => rollDie( 4)
                 }
         },
         {
@@ -195,7 +195,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 6)
+                    callback: () => rollDie( 6)
                 }
         },
         {
@@ -211,7 +211,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 6)
+                    callback: () => rollDie( 6)
                 }
         },
         {
@@ -219,7 +219,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 8)
+                    callback: () => rollDie( 8)
                 }
         },
         {
@@ -227,7 +227,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 4)
+                    callback: () => rollDie( 4)
                 }
         },
         {
@@ -235,7 +235,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 3)
+                    callback: () => rollDie( 3)
                 }
         },
         {
@@ -243,7 +243,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 8)
+                    callback: () => rollDie( 8)
                 }
         }
     ],
@@ -253,7 +253,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 3)
+                    callback: () => rollDie( 3)
                 }
         },
         {
@@ -261,7 +261,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 2)
+                    callback: () => rollDie( 2)
                 }
         },
         {
@@ -269,7 +269,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 4)
+                    callback: () => rollDie( 4)
                 }
         },
         {
@@ -277,7 +277,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 4)
+                    callback: () => rollDie( 4)
                 }
         },
         {
@@ -285,7 +285,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 2)
+                    callback: () => rollDie( 2)
                 }
         },
         {
@@ -301,7 +301,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 6)
+                    callback: () => rollDie( 6)
                 }
         },
         {
@@ -309,7 +309,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 4)
+                    callback: () => rollDie( 4)
                 }
         },
         {
@@ -317,7 +317,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 1)
+                    callback: () => rollDie( 1)
                 }
         },
         {
@@ -325,7 +325,7 @@ const bm_table1 = {
             action:
                 {
                     name: 'rollDie',
-                    callback: () => rollDie(1, 1)
+                    callback: () => rollDie( 1)
                 }
         }
     ]
@@ -344,19 +344,19 @@ function rivalParty() {
 
     //Note there is a 25% chance these groups may have 1d4 Level 0 Men-at-Arms in their employ.
     const mAa = (function () {
-        if (rollDie(1, 100) <= 25) {
-            const count = rollDie(1, 4);
+        if (rollDie( 100) <= 25) {
+            const count = rollDie( 4);
             return 'with ' + count + ' Level 0 Men-at-Arms'
         } else {
             return '';
         }
     }());
-    return rivalParties[rollDie(1, 6) - 1] + mAa;
+    return rivalParties[rollDie( 6) - 1] + mAa;
 }
 
-export function generateRandomEncounter(encounterLevel: string) :string {
+export function generateRandomEncounter(encounterLevel: string ) :string {
     let response,
-        {action, label} = bm_table1[encounterLevel][rollDie(1, 10) - 1];
+        {action, label} = bm_table1[encounterLevel][rollDie( 10) -1];
 
     if (action.name === 'generateRandomEncounter') {
         return action.callback();
