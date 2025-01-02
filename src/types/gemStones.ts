@@ -1,7 +1,7 @@
 import {GemDetails, opacityType} from "./gemEnums";
 import { rollDie } from "../shared/utilities";
 
-const pathRoot = '../gemstones/gems';
+const pathRoot = 'gemstones/gems';
 
 const BlackOpal: GemDetails = {
     description: 'dark green with black mottling and golden flecks',
