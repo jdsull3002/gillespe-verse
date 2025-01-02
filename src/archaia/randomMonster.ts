@@ -1,7 +1,5 @@
 import {rollDice, rollDie, labelPluralize} from "../shared/utilities";
 
-import {response} from "../types/responseTypes";
-
 const cOa_table2 = {
     arches: {
         low: [
@@ -529,11 +527,11 @@ const cOa_table2 = {
     }
 }
 
-function handleSpecial(name: string): response {
+function handleSpecial(name: string) {
     let test, response
     switch (name) {
         case 'Mimic or Rust Monster':
-            test = rollDie(1, 5);
+            test = rollDie( 5);
             if (test < 3) {
                 response = {
                     label: 'Mimic',
@@ -554,7 +552,7 @@ function handleSpecial(name: string): response {
             return response;
 
         case 'Ghoul or Ghast':
-            test = rollDie(1, 6);
+            test = rollDie( 6);
             if (test < 5) {
                 response = {
                     label: 'Ghoul',
@@ -568,18 +566,18 @@ function handleSpecial(name: string): response {
                     label: 'Ghast',
                     action: {
                         name: 'rollDie',
-                        callback: () => rollDie(1, 2)
+                        callback: () => rollDie( 2)
                     }
                 }
             }
             return response;
 
         case 'Stirge or Giant Bat':
-            test = rollDie(1, 2);
+            test = rollDie( 2);
             response = {
                 label: '',
                 action: {
-                    callback: () => rollDie(1, 10)
+                    callback: () => rollDie( 10)
                 }
             };
             if (test == 1) {
@@ -590,11 +588,11 @@ function handleSpecial(name: string): response {
             return response;
 
         case 'Green Slime or Yellow Mold':
-            test = rollDie(1, 2);
+            test = rollDie( 2);
             response = {
                 label: '',
                 action: {
-                    callback: () => rollDie(1, 1)
+                    callback: () => rollDie( 1)
                 }
             };
             if (test == 1) {
@@ -607,10 +605,11 @@ function handleSpecial(name: string): response {
     }
 }
 
-export function generateRandomMonster(area: string, level: string) {
+export function generateRandomMonster(area: string, level: string): string {
     let response,
         // {action, label} = cOa_table2[area][level][6];
-        {action, label} = cOa_table2[area][level][rollDie(1, 10) - 1];
+        dieRoll = rollDie( 10) - 1,
+        {action, label} = cOa_table2[area][level][dieRoll];
 
     if (action.name === 'special') {
         const newResponse = handleSpecial(label);

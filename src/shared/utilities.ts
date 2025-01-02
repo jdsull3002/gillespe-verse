@@ -15,8 +15,7 @@ export function rollDice(number: number, sides: number, modifier: number = 0): {
     }
 }
 
-export function rollDie(number: number,
-                        sides: number,
+export function rollDie(                        sides: number,
                         modifier:number = 0): number {
     return  Math.floor((Math.random() * sides) + 1) + modifier;
 }

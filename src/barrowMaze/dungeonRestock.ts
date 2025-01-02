@@ -10,7 +10,7 @@ const bm_table7: string[] = [
 ];
 
 export function generateRestock(): string{
-    let dr: number    = rollDie(1, 6),
+    let dr: number    = rollDie( 6),
         part1: string = bm_table7[dr-1];
 
     switch(dr){
@@ -25,5 +25,5 @@ export function generateRestock(): string{
     return part1;
 }
 function concealedTreasure(): boolean {
-    return rollDie(1,6) <= 1;
+    return rollDie(6) <= 1;
 }

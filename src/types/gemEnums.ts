@@ -4,7 +4,7 @@ export enum opacityType {
     opaque = "opaque"
 }
 
-export enum gemSizeEnum {
+export enum gemSizeString {
     verySmall= "Very Small",
     small = "Small",
     average = "Average",
@@ -13,13 +13,31 @@ export enum gemSizeEnum {
     huge = "Huge",
 }
 
+export enum gemSize {
+    verySmall,
+    small,
+    average ,
+    large ,
+    veryLarge,
+    huge
+}
+
+export enum gemValueMultiplier {
+    verySmall= 0.5,
+    small = 0.8,
+    average = 1,
+    large = 1.2,
+    veryLarge = 1.5,
+    huge = 2,
+}
+
 export enum gemClass {
-    ornamental= "ornamental",
-    semiPrecious = "semiPrecious",
-    fancy = "fancy",
-    precious = "precious",
-    gem = "gem",
-    jewel = "jewel"
+    ornamental,
+    semiPrecious,
+    fancy ,
+    precious,
+    gem,
+    jewel
 }
 
 export type GemDetails = {
@@ -31,7 +49,7 @@ export type GemDetails = {
 }
 
 export type GemTreasure = {
-    baseValue: number,
+    derivedValue: number,
     description: GemDetails,
-    size: gemSizeEnum
+    size: gemSize
 }

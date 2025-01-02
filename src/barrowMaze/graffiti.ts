@@ -16,6 +16,6 @@ const bm_table5: string[] = [
 ]
 
 export function generateWallGraffiti(): string{
-    return bm_table5[rollDie(1, bm_table5.length) -1];
+    return bm_table5[rollDie( bm_table5.length) -1];
 
 }

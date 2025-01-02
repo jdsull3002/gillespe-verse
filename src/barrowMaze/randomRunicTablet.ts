@@ -25,21 +25,21 @@ const bm_table6: string[] = [
 ];
 
 export function randomRunicTablet(): string{
-    let dieRoll = rollDie(1, 20),
+    let dieRoll = rollDie( 20),
         responseString;
 
     console.log(dieRoll);
 
     switch(dieRoll) {
         case 15:
-            responseString = 'Table is a copy of ' + muSpells[2][rollDie(1, muSpells[2].length)-1];
+            responseString = 'Table is a copy of ' + muSpells[2][rollDie( muSpells[2].length) -1];
             break;
         case 16:
-            responseString = 'Table is a copy of ' + clSpells[2][rollDie(1, clSpells[2].length)-1];
+            responseString = 'Table is a copy of ' + clSpells[2][rollDie( clSpells[2].length) -1];
             break;
         case 20:
             let abilities = ['STR', 'INT', 'WIS', 'DEX', 'CON', 'CHA'];
-            responseString = "Reader receives +1 to " + abilities[rollDie(1,6)-1] //19
+            responseString = "Reader receives +1 to " + abilities[rollDie(6) -1] //19
             break
         default:
             responseString =  bm_table6[dieRoll-1];

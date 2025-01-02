@@ -11,7 +11,7 @@ const numberOfGems: Ref<number> = ref(0);
 const response: Ref<GemTreasure[]> = ref([]);
 const totalValue: ComputedRef<number> = computed(()=>{
   let tVal = 0;
-  response?.value.map(stone => tVal = tVal + stone.baseValue);
+  response?.value.map(stone => tVal = tVal + stone.derivedValue);
   return tVal;
 });
 
@@ -71,7 +71,7 @@ function generateGems() {
         </ion-grid>
 
         <div v-if="totalValue > 0">
-          <h3> Total Value:  <span>{{totalValue}}</span></h3>
+          <h3> Total Value:  <span>{{totalValue.toLocaleString()}} gp</span></h3>
         </div>
       </main>
     </template>
