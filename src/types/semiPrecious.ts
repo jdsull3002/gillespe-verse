@@ -21,7 +21,7 @@ const Carnelian: GemDetails = {
 
 const Chalcedony: GemDetails = {
     description: "white",
-    image: pathRoot + '/bloodstone.jpg',
+    image: pathRoot + '/white_chalcedony.jpg',
     name: "Chalcedony",
     opacity: opacityType.opaque,
     value: rollDie( 3, 3) * 10
@@ -29,7 +29,7 @@ const Chalcedony: GemDetails = {
 
 const Chrysoprase: GemDetails = {
     description: "apple green to emerald green",
-    image: pathRoot + '/bloodstone.jpg',
+    image: pathRoot + '/chrysoprase.jpg',
     name: "Chrysoprase",
     opacity: opacityType.translucent,
     value: rollDie( 3, 3) * 10

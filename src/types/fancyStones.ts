@@ -16,7 +16,7 @@ const Amber: GemDetails = {
 // 2. Alexandrite: dark green (100)
 const Alexandrite: GemDetails = {
     description: 'dark green',
-    image: pathRoot + '/alexandrite.jpeg',
+    image: pathRoot + '/alexandrite.jpg',
     name: "Alexandrite",
     opacity: opacityType.transparent,
      value:  (rollDice(2, 20).total + 80) * 10 // 82 - 120
@@ -25,7 +25,7 @@ const Alexandrite: GemDetails = {
 // 3. Amethyst: deep purple (100)
 const Amethyst: GemDetails = {
     description: 'deep purple',
-    image: pathRoot + '/amethyst.pgn',
+    image: pathRoot + '/amethyst.png',
     name: "Amethyst",
     opacity: opacityType.transparent,
      value:  (rollDice(2, 20).total + 80) * 10 // 82 - 120
@@ -61,7 +61,7 @@ const CommonGarnet: GemDetails = {
 // 8. Jade: light green, deep green, green and white, white (100)
 const Jade: GemDetails = {
     description: 'light green, deep green, green and white, white',
-    image: pathRoot + '/jade.jpg',
+    image: pathRoot + '/jade.webp',
     name: "Jade",
     opacity: opacityType.translucent,
      value:  (rollDice(2, 20).total + 80) * 10 // 82 - 120
@@ -70,7 +70,7 @@ const Jade: GemDetails = {
 // 9. Jet*: deep black (100)
 const Jet: GemDetails = {
     description: 'deep black',
-    image: pathRoot + '/',
+    image: pathRoot + '/jet.jpg',
     name: "Jet",
     opacity: opacityType.opaque,
      value:  (rollDice(2, 20).total + 80) * 10 // 82 - 120

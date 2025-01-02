@@ -1,7 +1,8 @@
 import {opacityType, GemDetails} from "./gemEnums";
 import {rollDice} from "../shared/utilities";
 
-const pathRoot = '../gemstones/ornamental'
+const pathRoot = '../gemstones/ornamental';
+
 const Azurite: GemDetails = {
     description: "mottled deep blue",
     image: pathRoot + '/azurite.png',
