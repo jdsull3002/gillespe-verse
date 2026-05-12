@@ -1,0 +1,102 @@
+{
+  "hash": "650dd77d",
+  "configHash": "9b5bee13",
+  "lockfileHash": "a2aaa530",
+  "browserHash": "549661cf",
+  "optimized": {
+    "@ionic/vue": {
+      "src": "../../node_modules/@ionic/vue/dist/index.js",
+      "file": "@ionic_vue.js",
+      "fileHash": "3cadfae2",
+      "needsInterop": false
+    },
+    "vue": {
+      "src": "../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "dc38a2ca",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "animation-DDHHTMnT": {
+      "file": "animation-DDHHTMnT.js",
+      "isDynamicEntry": false
+    },
+    "client-C-sg6esh": {
+      "file": "client-C-sg6esh.js",
+      "isDynamicEntry": false
+    },
+    "dir-B2qNYkzX": {
+      "file": "dir-B2qNYkzX.js",
+      "isDynamicEntry": false
+    },
+    "focus-visible-DaLDzau9": {
+      "file": "focus-visible-DaLDzau9.js",
+      "isDynamicEntry": false
+    },
+    "hardware-back-button-Dm99ueKI": {
+      "file": "hardware-back-button-Dm99ueKI.js",
+      "isDynamicEntry": false
+    },
+    "helpers-CcK7VbtN": {
+      "file": "helpers-CcK7VbtN.js",
+      "isDynamicEntry": false
+    },
+    "index3-BWazFg8f": {
+      "file": "index3-BWazFg8f.js",
+      "isDynamicEntry": false
+    },
+    "index4-Dp5su7Z0": {
+      "file": "index4-Dp5su7Z0.js",
+      "isDynamicEntry": false
+    },
+    "index7-Dwu7aWhV": {
+      "file": "index7-Dwu7aWhV.js",
+      "isDynamicEntry": true
+    },
+    "index8-DfmWCWxB": {
+      "file": "index8-DfmWCWxB.js",
+      "isDynamicEntry": false
+    },
+    "index9-Dbib3cpu": {
+      "file": "index9-Dbib3cpu.js",
+      "isDynamicEntry": false
+    },
+    "input-shims-Dp-LZX04": {
+      "file": "input-shims-Dp-LZX04.js",
+      "isDynamicEntry": true
+    },
+    "ios.transition-DuHVEmfq": {
+      "file": "ios.transition-DuHVEmfq.js",
+      "isDynamicEntry": false
+    },
+    "keyboard-D6O0knim": {
+      "file": "keyboard-D6O0knim.js",
+      "isDynamicEntry": false
+    },
+    "keyboard2-C5kYf6Hk": {
+      "file": "keyboard2-C5kYf6Hk.js",
+      "isDynamicEntry": false
+    },
+    "md.transition-BtLfPlMn": {
+      "file": "md.transition-BtLfPlMn.js",
+      "isDynamicEntry": false
+    },
+    "rolldown-runtime-CiIaOW0V": {
+      "file": "rolldown-runtime-CiIaOW0V.js",
+      "isDynamicEntry": false
+    },
+    "status-tap-BZDCeK3q": {
+      "file": "status-tap-BZDCeK3q.js",
+      "isDynamicEntry": true
+    },
+    "swipe-back-DBo65gzB": {
+      "file": "swipe-back-DBo65gzB.js",
+      "isDynamicEntry": true
+    },
+    "vue.runtime.esm-bundler-bsHn1SE6": {
+      "file": "vue.runtime.esm-bundler-bsHn1SE6.js",
+      "isDynamicEntry": false
+    }
+  }
+}
