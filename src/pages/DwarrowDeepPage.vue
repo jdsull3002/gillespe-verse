@@ -1,0 +1,28 @@
+<script setup  lang="ts">
+
+import BasePage from "@/pages/BasePage.vue";
+</script>
+
+<template>
+  <BasePage>
+    <template v-slot:header>
+      <header>
+        <div class="wrapper">
+          <h1>Dwarrowdeep</h1>
+        </div>
+      </header>
+    </template>
+
+    <template v-slot:default>
+      <main>
+        <div>
+          Coming Soon!
+        </div>
+      </main>
+    </template>
+  </BasePage>
+</template>
+
+<style scoped>
+
+</style>
