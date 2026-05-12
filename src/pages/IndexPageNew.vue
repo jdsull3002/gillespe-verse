@@ -1,65 +1,74 @@
-<script setup lang="ts">
+<script setup lang="ts" >
 import BasePage from "@/pages/BasePage.vue";
-import {IonButton} from "@ionic/vue";
-</script>
+import {IonButton, IonGrid, IonRow, IonCol} from "@ionic/vue";
+</script >
 
-<template>
-  <BasePage>
-<!--    <template v-slot:header>-->
-<!--      <header>-->
-<!--        <img alt="Vue logo" class="logo" src="../assets/logo.svg" width="125" height="125"/>-->
+<template >
+  <BasePage >
+    <!--    <template v-slot:header>-->
+    <!--      <header>-->
+    <!--        <img alt="Vue logo" class="logo" src="../assets/logo.svg" width="125" height="125"/>-->
 
-<!--        <div class="wrapper">-->
-<!--          <HelloWorld msg="You did it!"/>-->
-<!--        </div>-->
-<!--      </header>-->
+    <!--        <div class="wrapper">-->
+    <!--          <HelloWorld msg="You did it!"/>-->
+    <!--        </div>-->
+    <!--      </header>-->
 
-<!--    </template>-->
+    <!--    </template>-->
 
-    <template v-slot:default>
-      <main>
-        <div>
-          <div>
-            <h3>The Barrowmaze</h3>
-            <router-link to="/barrowmaze">
-              <ion-button>click me</ion-button>
-            </router-link>
-          </div>
+    <template v-slot:default >
+      <main >
+        <div style="border: 1px dashed green" >
+          <div >
+            <ion-grid  style="border: 1px solid green" >
 
+              <router-link to="/barrowmaze" >
+                <ion-row class="ion-justify-content-center ion-align-items-center" >
 
-          <div>
-            <h3>Caverns of Arachia</h3>
-            <router-link to="/arachia">
-              <ion-button>click me</ion-button>
-            </router-link>
-          </div>
+                  <ion-col size="6">
+                    <img class="titleArt" src="../../art/BMC/header.png"
+                         alt="Barrowmaze Complete" />
+                  </ion-col >
+                  <ion-col size="4">
+                    <ion-button >click me</ion-button >
+                  </ion-col>
+                </ion-row >
+              </router-link >
 
-          <div>
-            <h3>Highfell</h3>
-            <router-link to="/highfell">
-              <ion-button>click me</ion-button>
-            </router-link>
-          </div>
+              <router-link to="/arachia" >
+              <ion-row class="ion-justify-content-center ion-align-items-center">
+                <ion-col size="6"> <img src="../../art/BMC/coa title.png" />
+                </ion-col >
+                <ion-col size="4">
+                  <ion-button >click me</ion-button ></ion-col >
+              </ion-row >
+              </router-link >
 
-          <div>
-            <h3>Dwarrowdeep</h3>
-            <router-link to="/dwarrowdeep">
-              <ion-button>click me</ion-button>
-            </router-link>
-          </div>
-          <div>
-            <h3>Gems and Jewels</h3>
-            <router-link to="/gemsTreasures">
-              <ion-button>click me</ion-button>
-            </router-link>
-          </div>
-
+              <router-link to="/gemsTreasures" >
+                <ion-row  class="ion-justify-content-center ion-align-items-center">
+                  <ion-col size="6">  <h3 >AD & D 1e Gems and Jewels</h3 ></ion-col >
+                  <ion-col size="4">   <ion-button >click me</ion-button ></ion-col >
+                </ion-row>
+              </router-link>
+            </ion-grid >
+          </div >
         </div>
-      </main>
 
-    </template>
-  </BasePage>
+<!--          <div >-->
+<!--            <h3 >Highfell</h3 >-->
+<!--            <router-link to="/highfell" >-->
+<!--              <ion-button >click me</ion-button >-->
+<!--            </router-link >-->
+<!--          </div >-->
 
+<!--          <div >-->
+<!--            <h3 >Dwarrowdeep</h3 >-->
+<!--            <router-link to="/dwarrowdeep" >-->
+<!--              <ion-button >click me</ion-button >-->
+<!--            </router-link >-->
+<!--          </div >-->
+      </main >
 
-</template>
-
+    </template >
+  </BasePage >
+</template >
