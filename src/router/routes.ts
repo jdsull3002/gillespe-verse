@@ -6,6 +6,7 @@ import HighfellPage from "@/pages/HighfellPage.vue";
 import DwarrowDeepPage from "@/pages/DwarrowDeepPage.vue";
 import ResultsPage from "@/pages/ResultsPage.vue";
 import GemsTreasures from "@/pages/GemsTreasures.vue";
+import GemsList from "@/pages/GemsList.vue";
 
 const routes = [
     {
@@ -31,6 +32,10 @@ const routes = [
     {
         path: '/gemsTreasures',
         component: GemsTreasures
+    },
+    {
+        path: '/gemsList',
+        component: GemsList
     },
     {
         path: '/results',

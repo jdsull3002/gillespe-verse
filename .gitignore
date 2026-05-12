@@ -17,6 +17,7 @@ art
 
 /cypress/videos/
 /cypress/screenshots/
+/db
 
 # Editor directories and files
 .vscode/*

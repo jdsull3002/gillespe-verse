@@ -55,9 +55,7 @@ function generateRandomEncounter(area, level)
     <template v-slot:header>
       <header>
         <div class="wrapper">
-          <img src="../../art/BMC/coa title.png"  />
-          <br />
-         <h1>Caverns of Archaia</h1>
+          <img src="../../art/BMC/coa title.png"   width="50%"/>
         </div>
       </header>
     </template>
